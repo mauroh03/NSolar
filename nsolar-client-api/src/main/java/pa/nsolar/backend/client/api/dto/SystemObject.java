@@ -1,5 +1,7 @@
 package pa.nsolar.backend.client.api.dto;
 
+import java.util.List;
+
 public class SystemObject {
 
 	private Integer system_id;
@@ -12,7 +14,7 @@ public class SystemObject {
 	private String city;
 	private String postal_code;
 	private String connection_type;
-	private MetaObject meta;
+	private MetaObject meta;	
 
 	public Integer getSystem_id() {
 		return system_id;

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 
 import pa.nsolar.backend.client.api.dto.ClientSummaryRequest;
 import pa.nsolar.backend.client.api.dto.ClientSummaryResponse;
+import pa.nsolar.backend.client.api.dto.EnergyLifeTimeDatedRequest;
+import pa.nsolar.backend.client.api.dto.EnergyLifeTimeDatedResponse;
 import pa.nsolar.backend.client.api.dto.EnergyLifeTimeResponse;
 import pa.nsolar.backend.client.api.dto.ExampleResponse;
 import pa.nsolar.backend.client.services.interfaces.IClientNSolar;
@@ -44,8 +46,17 @@ public class ConsultClientController {
 	}
 	
 	@CrossOrigin(origins = "*")
+	@PostMapping("/consultEnergyLifeTime")
+	public ResponseEntity<EnergyLifeTimeDatedResponse> consultEnergyLifeTimeMethodPost(
+			@RequestBody EnergyLifeTimeDatedRequest energyLifeTimeDatedRequest) {
+		LOGGER.info("[NSOLAR - TRACE] - ENTRY SERVICE consultEnergyLifeTime");
+		return new ResponseEntity<>(nSolarClient.nSolarLifeTimeEnergy(energyLifeTimeDatedRequest), HttpStatus.OK);
+	}
+	
+	@CrossOrigin(origins = "*")
 	@PostMapping("/consultClientSummary")
-	public ResponseEntity<ClientSummaryResponse> consultClientSummaryMethodPost(@RequestBody ClientSummaryRequest clientSummaryRequest) {
+	public ResponseEntity<ClientSummaryResponse> consultClientSummaryMethodPost(
+			@RequestBody ClientSummaryRequest clientSummaryRequest) {
 		LOGGER.info("[NSOLAR - TRACE] - ENTRY SERVICE consultClientSummary");
 		return new ResponseEntity<>(nSolarClient.nSolarClientSummary(clientSummaryRequest), HttpStatus.OK);
 	}
