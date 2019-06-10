@@ -9,7 +9,6 @@ import org.springframework.web.client.RestTemplate;
 import pa.nsolar.backend.client.api.dto.ClientSummaryRequest;
 import pa.nsolar.backend.client.api.dto.ClientSummaryResponse;
 import pa.nsolar.backend.client.api.dto.EnergyLifeTimeDatedObject;
-import pa.nsolar.backend.client.api.dto.EnergyLifeTimeDatedRequest;
 import pa.nsolar.backend.client.api.dto.EnergyLifeTimeDatedResponse;
 import pa.nsolar.backend.client.api.dto.EnergyLifeTimeResponse;
 import pa.nsolar.backend.client.services.controller.ConsultClientController;
@@ -35,6 +34,8 @@ public class ApiCallOperation implements IApiCallOperation {
 	@Value("${nsolar.user_id}")
 	private String nSolarUserID;
 
+	String endpoint = "";
+			
 	@Override
 	public EnergyLifeTimeResponse nSolarClientList() {
 		RestTemplate restTemplate = new RestTemplate();
@@ -52,12 +53,13 @@ public class ApiCallOperation implements IApiCallOperation {
 
 	@Override
 	public ClientSummaryResponse nSolarCLientSummary(ClientSummaryRequest clientSummaryRequest) {
-		LOGGER.info("[NSOLAR - TRACE] - consultClientSummary REQUEST: {}", clientSummaryRequest);
 		RestTemplate restTemplate = new RestTemplate();
 		ClientSummaryResponse response = new ClientSummaryResponse();
+		endpoint = clientSummary;
 		try {
-			clientSummary = clientSummary.replace("$clientId", String.valueOf(clientSummaryRequest.getClientId()));
-			response = restTemplate.getForObject(clientSummary + "key=" + nSolarKey + "&user_id=" + nSolarUserID,
+			endpoint = clientSummary.replace("$clientId", String.valueOf(clientSummaryRequest.getClientId()));
+			LOGGER.info("[NSOLAR - TRACE] - consultClientSummary ENDPOINT: {}\nREQUEST: {}", clientSummaryRequest);
+			response = restTemplate.getForObject(endpoint + "key=" + nSolarKey + "&user_id=" + nSolarUserID,
 					ClientSummaryResponse.class);
 			LOGGER.info("[NSOLAR - TRACE] - consultClientSummary RESPONSE: {}", response);
 		} catch (Exception e) {
@@ -69,17 +71,17 @@ public class ApiCallOperation implements IApiCallOperation {
 
 	@Override
 	public EnergyLifeTimeDatedResponse nSolarEnergyLifeTime(EnergyLifeTimeDatedObject energyLifeTimeDatedObject) {
-		LOGGER.info("[NSOLAR - TRACE] - energyLifeTimeDated REQUEST: {}", energyLifeTimeDatedObject);
 		RestTemplate restTemplate = new RestTemplate();
 		EnergyLifeTimeDatedResponse response = new EnergyLifeTimeDatedResponse();
+		endpoint = energyLifetimeDatedUri;
 		try {
-			energyLifetimeDatedUri = energyLifetimeDatedUri
+			endpoint = energyLifetimeDatedUri
 					.replace("$clientId", energyLifeTimeDatedObject.getClientId())
 					.replace("$start_date", "start_date="+energyLifeTimeDatedObject.getStartDate())
 					.replace("$end_date", "end_date="+energyLifeTimeDatedObject.getEndDate())
 					.replace("$production", "production="+energyLifeTimeDatedObject.getProduction());
-			LOGGER.info("endpoint = {}", energyLifetimeDatedUri + "key=" + nSolarKey + "&user_id=" + nSolarUserID);
-			response = restTemplate.getForObject(energyLifetimeDatedUri + "key=" + nSolarKey + "&user_id=" + nSolarUserID,
+			LOGGER.info("[NSOLAR - TRACE] - energyLifeTimeDated ENDPOINT: {}\nREQUEST: {}", energyLifeTimeDatedObject);
+			response = restTemplate.getForObject(endpoint + "key=" + nSolarKey + "&user_id=" + nSolarUserID,
 					EnergyLifeTimeDatedResponse.class);
 			response.setEndDate(energyLifeTimeDatedObject.getEndDate());
 			LOGGER.info("[NSOLAR - TRACE] - energyLifeTimeDated RESPONSE: {}", response);
