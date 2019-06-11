@@ -58,7 +58,7 @@ public class ApiCallOperation implements IApiCallOperation {
 		endpoint = clientSummary;
 		try {
 			endpoint = clientSummary.replace("$clientId", String.valueOf(clientSummaryRequest.getClientId()));
-			LOGGER.info("[NSOLAR - TRACE] - consultClientSummary ENDPOINT: {}\nREQUEST: {}", clientSummaryRequest);
+			LOGGER.info("[NSOLAR - TRACE] - consultClientSummary ENDPOINT: {}\nREQUEST: {}", endpoint, clientSummaryRequest);
 			response = restTemplate.getForObject(endpoint + "key=" + nSolarKey + "&user_id=" + nSolarUserID,
 					ClientSummaryResponse.class);
 			LOGGER.info("[NSOLAR - TRACE] - consultClientSummary RESPONSE: {}", response);
@@ -80,7 +80,7 @@ public class ApiCallOperation implements IApiCallOperation {
 					.replace("$start_date", "start_date="+energyLifeTimeDatedObject.getStartDate())
 					.replace("$end_date", "end_date="+energyLifeTimeDatedObject.getEndDate())
 					.replace("$production", "production="+energyLifeTimeDatedObject.getProduction());
-			LOGGER.info("[NSOLAR - TRACE] - energyLifeTimeDated ENDPOINT: {}\nREQUEST: {}", energyLifeTimeDatedObject);
+			LOGGER.info("[NSOLAR - TRACE] - energyLifeTimeDated ENDPOINT: {}\nREQUEST: {}", endpoint, energyLifeTimeDatedObject);
 			response = restTemplate.getForObject(endpoint + "key=" + nSolarKey + "&user_id=" + nSolarUserID,
 					EnergyLifeTimeDatedResponse.class);
 			response.setEndDate(energyLifeTimeDatedObject.getEndDate());

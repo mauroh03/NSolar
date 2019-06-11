@@ -3,7 +3,7 @@ package pa.nsolar.backend.client.api.dto;
 public class GenerationMeasurement {
 
 	private String indicator;
-	private Double value;
+	private String value;
 
 	public String getIndicator() {
 		return indicator;
@@ -13,11 +13,11 @@ public class GenerationMeasurement {
 		this.indicator = indicator;
 	}
 
-	public Double getValue() {
+	public String getValue() {
 		return value;
 	}
 
-	public void setValue(Double value) {
+	public void setValue(String value) {
 		this.value = value;
 	}
 

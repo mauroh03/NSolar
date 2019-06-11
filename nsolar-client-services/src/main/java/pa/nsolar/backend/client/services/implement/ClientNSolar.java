@@ -37,10 +37,9 @@ public class ClientNSolar implements IClientNSolar {
 	@Autowired
 	IApiCallOperation apiCallOperation;
 
-	
 	@Value("${nsolar.general.filePath}")
 	private String filePath;
-	
+
 	@Override
 	public EnergyLifeTimeResponse nSolarClientList() {
 		return apiCallOperation.nSolarClientList();
@@ -54,14 +53,13 @@ public class ClientNSolar implements IClientNSolar {
 	@Override
 	public EnergyLifeTimeDatedResponse nSolarLifeTimeEnergy(EnergyLifeTimeDatedRequest energyLifeTimeDatedRequest) {
 		EnergyLifeTimeDatedObject energyLifeTimeDatedObject = new EnergyLifeTimeDatedObject();
-		EnergyLifeTimeDatedResponse response = new EnergyLifeTimeDatedResponse();
 		ExcelObject clientExcelObject = this.getClientJSONObject(energyLifeTimeDatedRequest.getClientId());
 		DateObject dateObject = this.getDates(energyLifeTimeDatedRequest.getDate(), 1);
 		energyLifeTimeDatedObject.setProduction("all");
 		energyLifeTimeDatedObject.setClientId(String.valueOf(energyLifeTimeDatedRequest.getClientId()));
 		energyLifeTimeDatedObject.setStartDate(dateObject.getStartDate());
 		energyLifeTimeDatedObject.setEndDate(dateObject.getEndDate());
-		response = apiCallOperation.nSolarEnergyLifeTime(energyLifeTimeDatedObject);
+		EnergyLifeTimeDatedResponse response = apiCallOperation.nSolarEnergyLifeTime(energyLifeTimeDatedObject);
 		response.setMayorGeneration(this.getGenerationDate(response, "+"));
 		response.setMinorGeneration(this.getGenerationDate(response, "-"));
 		response.setTotalGeneracion(response.getProduction().stream().mapToInt(Integer::intValue).sum());
@@ -69,26 +67,21 @@ public class ClientNSolar implements IClientNSolar {
 		response.setMetrictsTons(this.getMetricsTons(response));
 		response.setHouses(this.getHouseCount(response));
 		response.setTrees(this.getTreesCount(response));
-		response.setPanel(String.valueOf(clientExcelObject.getPaneles()));
-		response.setPanelModel(clientExcelObject.getModelo_Panel());
-		response.setPanelWatts(clientExcelObject.getWatts_Panel());
-		
+		response.setClientExcelObject(clientExcelObject);
+
 		return response;
 	}
-	
-	
 
 	private ExcelObject getClientJSONObject(Integer clientId) {
 		ObjectMapper mapper = new ObjectMapper();
 		List<ExcelObject> excelClientList = new ArrayList<>();
 		ExcelObject userObject = new ExcelObject();
 		try {
-			excelClientList = mapper.readValue(
-					new File(filePath),
+			excelClientList = mapper.readValue(new File(filePath),
 					mapper.getTypeFactory().constructCollectionType(List.class, ExcelObject.class));
-			
+
 			for (ExcelObject excelObject : excelClientList) {
-				if(excelObject.getUser_id().equals(clientId)) {
+				if (excelObject.getUser_id().equals(clientId)) {
 					LOGGER.info("clientExcelObject: {}", excelObject);
 					return excelObject;
 				}
@@ -96,8 +89,8 @@ public class ClientNSolar implements IClientNSolar {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		LOGGER.error("Client not found on excel file: {}");
-		
+		LOGGER.error("Client not found on excel file");
+
 		return userObject;
 	}
 
@@ -144,20 +137,22 @@ public class ClientNSolar implements IClientNSolar {
 	}
 
 	private Integer getTreesCount(EnergyLifeTimeDatedResponse response) {
-		Double result = (response.getMetrictsTons() / 0.060);
-		LOGGER.info("Trees = {}/0.060 = {}", response.getMetrictsTons(), Integer.valueOf(result.intValue()));
+		Double result = (response.getProduction().stream().mapToInt(Integer::intValue).sum() / 0.060);
+		LOGGER.info("arboles: {}/0.06 = {}", response.getProduction().stream().mapToInt(Integer::intValue).sum(),
+				Integer.valueOf(result.intValue()));
 		return Integer.valueOf(result.intValue());
 	}
 
 	private Integer getHouseCount(EnergyLifeTimeDatedResponse response) {
-		Double result = (response.getMetrictsTons() / 5734);
-		LOGGER.info("Houses = {}/5734 = {}", response.getMetrictsTons(), Integer.valueOf(result.intValue()));
+		Double result = (response.getProduction().stream().mapToInt(Integer::intValue).sum() / 32.23013699);
+		LOGGER.info("casas: {}/32.23013699 = {}", response.getProduction().stream().mapToInt(Integer::intValue).sum(),
+				Integer.valueOf(result.intValue()));
 		return Integer.valueOf(result.intValue());
 	}
 
 	private Double getMetricsTons(EnergyLifeTimeDatedResponse response) {
 		DecimalFormat df = new DecimalFormat("#.00");
-		LOGGER.info("MetrictsTons = (7.07*10^-4)*{} = {}",
+		LOGGER.info("carbon offest (tons): (7.07x10-4)*{} = {}",
 				response.getProduction().stream().mapToInt(Integer::intValue).sum(),
 				Double.valueOf(df.format((7.07 * Math.pow(10, -4))
 						* response.getProduction().stream().mapToInt(Integer::intValue).sum())));
@@ -167,6 +162,7 @@ public class ClientNSolar implements IClientNSolar {
 
 	private GenerationMeasurement getComparisson(EnergyLifeTimeDatedRequest request,
 			EnergyLifeTimeDatedResponse actualData) {
+		DecimalFormat df = new DecimalFormat("#.00");
 		GenerationMeasurement response = new GenerationMeasurement();
 		DateObject dateObject = this.getDates(request.getDate(), -10);
 		EnergyLifeTimeDatedObject energyLifeTimeDatedObject = new EnergyLifeTimeDatedObject();
@@ -178,10 +174,13 @@ public class ClientNSolar implements IClientNSolar {
 		Integer actualProduction = actualData.getProduction().stream().mapToInt(Integer::intValue).sum();
 		Integer previousProduction = previousData.getProduction().stream().mapToInt(Integer::intValue).sum();
 		response.setIndicator((actualProduction - previousProduction) > 0 ? "Aumentó" : "Disminuyó");
-		response.setValue(Double.valueOf(Math.abs((actualProduction - previousProduction) / 100)));
 
-		LOGGER.info("Comparisson: {} percentage: |{}|", response.getIndicator(),
-				(actualProduction - previousProduction) / 100);
+		Double up = Double.valueOf(actualProduction - previousProduction);
+		Double down = Double.valueOf(previousProduction);
+		response.setValue(df.format((up/down)*100).replaceAll("-", ""));
+
+		LOGGER.info("Comparisson: {} percentage: |(({} - {}) / {})*100| = {}", response.getIndicator(),
+				actualProduction, previousProduction, previousProduction, (up/down)*100);
 
 		return response;
 	}
