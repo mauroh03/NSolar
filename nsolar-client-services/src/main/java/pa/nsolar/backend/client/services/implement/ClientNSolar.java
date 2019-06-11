@@ -11,6 +11,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -32,10 +33,14 @@ import pa.nsolar.backend.client.services.interfaces.IClientNSolar;
 public class ClientNSolar implements IClientNSolar {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ClientNSolar.class);
-
+	
 	@Autowired
 	IApiCallOperation apiCallOperation;
 
+	
+	@Value("${nsolar.general.filePath}")
+	private String filePath;
+	
 	@Override
 	public EnergyLifeTimeResponse nSolarClientList() {
 		return apiCallOperation.nSolarClientList();
@@ -50,6 +55,7 @@ public class ClientNSolar implements IClientNSolar {
 	public EnergyLifeTimeDatedResponse nSolarLifeTimeEnergy(EnergyLifeTimeDatedRequest energyLifeTimeDatedRequest) {
 		EnergyLifeTimeDatedObject energyLifeTimeDatedObject = new EnergyLifeTimeDatedObject();
 		EnergyLifeTimeDatedResponse response = new EnergyLifeTimeDatedResponse();
+		ExcelObject clientExcelObject = this.getClientJSONObject(energyLifeTimeDatedRequest.getClientId());
 		DateObject dateObject = this.getDates(energyLifeTimeDatedRequest.getDate(), 1);
 		energyLifeTimeDatedObject.setProduction("all");
 		energyLifeTimeDatedObject.setClientId(String.valueOf(energyLifeTimeDatedRequest.getClientId()));
@@ -63,26 +69,36 @@ public class ClientNSolar implements IClientNSolar {
 		response.setMetrictsTons(this.getMetricsTons(response));
 		response.setHouses(this.getHouseCount(response));
 		response.setTrees(this.getTreesCount(response));
-
-		// reading JSON
-		this.getJSONObject();
-
+		response.setPanel(String.valueOf(clientExcelObject.getPaneles()));
+		response.setPanelModel(clientExcelObject.getModelo_Panel());
+		response.setPanelWatts(clientExcelObject.getWatts_Panel());
+		
 		return response;
 	}
+	
+	
 
-	private List<ExcelObject> getJSONObject() {
+	private ExcelObject getClientJSONObject(Integer clientId) {
 		ObjectMapper mapper = new ObjectMapper();
 		List<ExcelObject> excelClientList = new ArrayList<>();
+		ExcelObject userObject = new ExcelObject();
 		try {
 			excelClientList = mapper.readValue(
-					new File("C:\\Users\\mauro\\OneDrive\\Escritorio\\playGround\\NSolar-Backend\\excel.json"),
+					new File(filePath),
 					mapper.getTypeFactory().constructCollectionType(List.class, ExcelObject.class));
+			
+			for (ExcelObject excelObject : excelClientList) {
+				if(excelObject.getUser_id().equals(clientId)) {
+					LOGGER.info("clientExcelObject: {}", excelObject);
+					return excelObject;
+				}
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		LOGGER.info("clientsOnExcel: {} ", excelClientList.size());
-		return excelClientList;
+		LOGGER.error("Client not found on excel file: {}");
+		
+		return userObject;
 	}
 
 	private DateObject getDates(String commingDate, Integer moreLess) {

@@ -18,6 +18,9 @@ public class EnergyLifeTimeDatedResponse {
 	private Double metrictsTons;
 	private Integer houses;
 	private Integer trees;
+	private String panel;
+	private String panelModel;
+	private Integer panelWatts;
 
 	public Integer getSystem_id() {
 		return system_id;
@@ -131,6 +134,30 @@ public class EnergyLifeTimeDatedResponse {
 		this.trees = trees;
 	}
 
+	public String getPanel() {
+		return panel;
+	}
+
+	public void setPanel(String panel) {
+		this.panel = panel;
+	}
+
+	public String getPanelModel() {
+		return panelModel;
+	}
+
+	public void setPanelModel(String panelModel) {
+		this.panelModel = panelModel;
+	}
+
+	public Integer getPanelWatts() {
+		return panelWatts;
+	}
+
+	public void setPanelWatts(Integer panelWatts) {
+		this.panelWatts = panelWatts;
+	}
+
 	@Override
 	public String toString() {
 		return "EnergyLifeTimeDatedResponse [system_id=" + system_id + ", start_date=" + start_date + ", production="
@@ -138,6 +165,7 @@ public class EnergyLifeTimeDatedResponse {
 				+ micro_production + ", endDate=" + endDate + ", totalGeneracion=" + totalGeneracion
 				+ ", minorGeneration=" + minorGeneration + ", mayorGeneration=" + mayorGeneration
 				+ ", generationComparizon=" + generationComparizon + ", metrictsTons=" + metrictsTons + ", houses="
-				+ houses + ", trees=" + trees + "]";
+				+ houses + ", trees=" + trees + ", panel=" + panel + ", panelModel=" + panelModel + ", panelWatts="
+				+ panelWatts + "]";
 	}
 }
