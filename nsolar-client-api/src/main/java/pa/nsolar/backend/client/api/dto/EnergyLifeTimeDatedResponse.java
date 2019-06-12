@@ -5,13 +5,13 @@ import java.util.List;
 public class EnergyLifeTimeDatedResponse {
 
 	private Integer system_id;
-    private String start_date;
-    private List<Integer> production;
-    private MetaObject meta;
-    private List<Integer> meter_production;
+	private String start_date;
+	private List<Integer> production;
+	private MetaObject meta;
+	private List<Integer> meter_production;
 	private List<Integer> micro_production;
 	private String endDate;
-	private Integer totalGeneracion;
+	private Double totalGeneracion;
 	private GenerationObject minorGeneration;
 	private GenerationObject mayorGeneration;
 	private GenerationMeasurement generationComparizon;
@@ -76,14 +76,6 @@ public class EnergyLifeTimeDatedResponse {
 		this.endDate = endDate;
 	}
 
-	public Integer getTotalGeneracion() {
-		return totalGeneracion;
-	}
-
-	public void setTotalGeneracion(Integer totalGeneracion) {
-		this.totalGeneracion = totalGeneracion;
-	}
-
 	public GenerationObject getMinorGeneration() {
 		return minorGeneration;
 	}
@@ -136,6 +128,18 @@ public class EnergyLifeTimeDatedResponse {
 		return clientExcelObject;
 	}
 
+	public Double getTotalGeneracion() {
+		return totalGeneracion;
+	}
+
+	public void setTotalGeneracion(Double totalGeneracion) {
+		this.totalGeneracion = totalGeneracion;
+	}
+
+	public void setClientExcelObject(ExcelObject clientExcelObject) {
+		this.clientExcelObject = clientExcelObject;
+	}
+
 	@Override
 	public String toString() {
 		return "EnergyLifeTimeDatedResponse [system_id=" + system_id + ", start_date=" + start_date + ", production="
@@ -144,9 +148,5 @@ public class EnergyLifeTimeDatedResponse {
 				+ ", minorGeneration=" + minorGeneration + ", mayorGeneration=" + mayorGeneration
 				+ ", generationComparizon=" + generationComparizon + ", metrictsTons=" + metrictsTons + ", houses="
 				+ houses + ", trees=" + trees + ", clientExcelObject=" + clientExcelObject + "]";
-	}
-
-	public void setClientExcelObject(ExcelObject clientExcelObject) {
-		this.clientExcelObject = clientExcelObject;
 	}
 }

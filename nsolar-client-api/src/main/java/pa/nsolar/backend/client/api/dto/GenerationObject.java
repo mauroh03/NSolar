@@ -3,21 +3,21 @@ package pa.nsolar.backend.client.api.dto;
 public class GenerationObject {
 
 	private Integer day;
-	private Integer generation;
+	private Double generation;
 
 	public Integer getDay() {
 		return day;
+	}
+
+	public Double getGeneration() {
+		return generation;
 	}
 
 	public void setDay(Integer day) {
 		this.day = day;
 	}
 
-	public Integer getGeneration() {
-		return generation;
-	}
-
-	public void setGeneration(Integer generation) {
+	public void setGeneration(Double generation) {
 		this.generation = generation;
 	}
 

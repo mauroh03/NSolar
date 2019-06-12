@@ -52,6 +52,7 @@ public class ClientNSolar implements IClientNSolar {
 
 	@Override
 	public EnergyLifeTimeDatedResponse nSolarLifeTimeEnergy(EnergyLifeTimeDatedRequest energyLifeTimeDatedRequest) {
+		DecimalFormat df = new DecimalFormat("#.00");
 		EnergyLifeTimeDatedObject energyLifeTimeDatedObject = new EnergyLifeTimeDatedObject();
 		ExcelObject clientExcelObject = this.getClientJSONObject(energyLifeTimeDatedRequest.getClientId());
 		DateObject dateObject = this.getDates(energyLifeTimeDatedRequest.getDate(), 1);
@@ -62,7 +63,7 @@ public class ClientNSolar implements IClientNSolar {
 		EnergyLifeTimeDatedResponse response = apiCallOperation.nSolarEnergyLifeTime(energyLifeTimeDatedObject);
 		response.setMayorGeneration(this.getGenerationDate(response, "+"));
 		response.setMinorGeneration(this.getGenerationDate(response, "-"));
-		response.setTotalGeneracion(response.getProduction().stream().mapToInt(Integer::intValue).sum());
+		response.setTotalGeneracion(Double.valueOf(df.format(response.getProduction().stream().mapToInt(Integer::intValue).sum() / 1000.0)));
 		response.setGenerationComparizon(this.getComparisson(energyLifeTimeDatedRequest, response));
 		response.setMetrictsTons(this.getMetricsTons(response));
 		response.setHouses(this.getHouseCount(response));
@@ -114,6 +115,7 @@ public class ClientNSolar implements IClientNSolar {
 	}
 
 	private GenerationObject getGenerationDate(EnergyLifeTimeDatedResponse data, String signal) {
+		DecimalFormat df = new DecimalFormat("#.00");
 		GenerationObject genObject = new GenerationObject();
 		Integer value = data.getProduction().get(0);
 		Integer day = 0;
@@ -131,22 +133,20 @@ public class ClientNSolar implements IClientNSolar {
 		}
 
 		genObject.setDay(day);
-		genObject.setGeneration(value);
+		genObject.setGeneration(Double.valueOf(df.format(value / 1000.0)));
 
 		return genObject;
 	}
 
 	private Integer getTreesCount(EnergyLifeTimeDatedResponse response) {
-		Double result = (response.getProduction().stream().mapToInt(Integer::intValue).sum() / 0.060);
-		LOGGER.info("arboles: {}/0.06 = {}", response.getProduction().stream().mapToInt(Integer::intValue).sum(),
-				Integer.valueOf(result.intValue()));
+		Double result = (response.getMetrictsTons() / 0.060);
+		LOGGER.info("arboles: {}/0.060 = {}", response.getMetrictsTons(), Integer.valueOf(result.intValue()));
 		return Integer.valueOf(result.intValue());
 	}
 
 	private Integer getHouseCount(EnergyLifeTimeDatedResponse response) {
-		Double result = (response.getProduction().stream().mapToInt(Integer::intValue).sum() / 32.23013699);
-		LOGGER.info("casas: {}/32.23013699 = {}", response.getProduction().stream().mapToInt(Integer::intValue).sum(),
-				Integer.valueOf(result.intValue()));
+		Double result = (response.getTotalGeneracion() / 32.23013699);
+		LOGGER.info("casas: ({}/32.23)/1000 = {}", response.getTotalGeneracion(), Integer.valueOf(result.intValue()));
 		return Integer.valueOf(result.intValue());
 	}
 
@@ -157,7 +157,7 @@ public class ClientNSolar implements IClientNSolar {
 				Double.valueOf(df.format((7.07 * Math.pow(10, -4))
 						* response.getProduction().stream().mapToInt(Integer::intValue).sum())));
 		return Double.valueOf(df.format(
-				(7.07 * Math.pow(10, -4)) * response.getProduction().stream().mapToInt(Integer::intValue).sum()));
+				(7.07 * Math.pow(10, -4)) * response.getTotalGeneracion()));
 	}
 
 	private GenerationMeasurement getComparisson(EnergyLifeTimeDatedRequest request,
@@ -171,8 +171,8 @@ public class ClientNSolar implements IClientNSolar {
 		energyLifeTimeDatedObject.setStartDate(dateObject.getStartDate());
 		energyLifeTimeDatedObject.setEndDate(dateObject.getEndDate());
 		EnergyLifeTimeDatedResponse previousData = apiCallOperation.nSolarEnergyLifeTime(energyLifeTimeDatedObject);
-		Integer actualProduction = actualData.getProduction().stream().mapToInt(Integer::intValue).sum();
-		Integer previousProduction = previousData.getProduction().stream().mapToInt(Integer::intValue).sum();
+		Double actualProduction = actualData.getProduction().stream().mapToInt(Integer::intValue).sum() / 1000.0;
+		Double previousProduction = previousData.getProduction().stream().mapToInt(Integer::intValue).sum() / 1000.0;
 		response.setIndicator((actualProduction - previousProduction) > 0 ? "Aumentó" : "Disminuyó");
 
 		Double up = Double.valueOf(actualProduction - previousProduction);
