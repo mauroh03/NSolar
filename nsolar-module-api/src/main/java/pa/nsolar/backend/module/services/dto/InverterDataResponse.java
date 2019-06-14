@@ -2,22 +2,22 @@ package pa.nsolar.backend.module.services.dto;
 
 public class InverterDataResponse {
 
-	private Integer maxGeneration;
-	private Integer minGeneration;
+	private Double maxGeneration;
+	private Double minGeneration;
 
-	public Integer getMaxGeneration() {
+	public Double getMaxGeneration() {
 		return maxGeneration;
 	}
 
-	public Integer getMinGeneration() {
+	public Double getMinGeneration() {
 		return minGeneration;
 	}
 
-	public void setMaxGeneration(Integer maxGeneration) {
+	public void setMaxGeneration(Double maxGeneration) {
 		this.maxGeneration = maxGeneration;
 	}
 
-	public void setMinGeneration(Integer minGeneration) {
+	public void setMinGeneration(Double minGeneration) {
 		this.minGeneration = minGeneration;
 	}
 

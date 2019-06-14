@@ -1,5 +1,6 @@
 package pa.nsolar.backend.module.services.implement;
 
+import java.text.DecimalFormat;
 import java.util.AbstractMap;
 import java.util.Collections;
 import java.util.Map;
@@ -36,8 +37,10 @@ public class ModuleInfoNSolar implements IModuleInfoNSolar {
 		return resposne;
 	}
 	
-	private Integer getValueFromInverterdata(Map<String, Integer> inverterProduction, String maxMin) {
+	private Double getValueFromInverterdata(Map<String, Integer> inverterProduction, String maxMin) {
+		DecimalFormat df = new DecimalFormat("#.00");
 		Entry<String,Integer> entry = new AbstractMap.SimpleEntry<>("", 0);
+		LOGGER.info("totalProduction: {}",  df.format(inverterProduction.values().stream().mapToInt(i->i).sum() / 1000.0));
 		if(maxMin.equals("+")) {
 			entry = Collections.max(inverterProduction.entrySet(), (Entry<String, Integer> e1, Entry<String, Integer> e2) -> e1.getValue()
 			        .compareTo(e2.getValue()));
@@ -48,7 +51,6 @@ public class ModuleInfoNSolar implements IModuleInfoNSolar {
 			LOGGER.info("MinValue: {}", entry);
 		}
 		
-		return entry.getValue();
+		return Double.valueOf(df.format(entry.getValue() / 1000.0));
 	}
-
 }
