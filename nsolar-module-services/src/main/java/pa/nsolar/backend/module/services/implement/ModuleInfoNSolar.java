@@ -12,9 +12,12 @@ import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import pa.nsolar.backend.module.services.dto.ENModuleArrayResponse;
 import pa.nsolar.backend.module.services.dto.InverterDataObject;
 import pa.nsolar.backend.module.services.dto.InverterDataRequest;
 import pa.nsolar.backend.module.services.dto.InverterDataResponse;
+import pa.nsolar.backend.module.services.dto.ModuleArrayRequest;
+import pa.nsolar.backend.module.services.dto.ModuleArrayResponse;
 import pa.nsolar.backend.module.services.interfaces.IModuleInfoNSolar;
 
 @Service
@@ -52,5 +55,23 @@ public class ModuleInfoNSolar implements IModuleInfoNSolar {
 		}
 		
 		return Double.valueOf(df.format(entry.getValue() / 1000.0));
+	}
+
+	@Override
+	public ModuleArrayResponse getModuleData(ModuleArrayRequest request) {
+		ModuleArrayResponse moduleArrayResponse = new ModuleArrayResponse();
+		ObjectMapper mapper = new ObjectMapper();
+		ENModuleArrayResponse moduleArrayObject = new ENModuleArrayResponse();
+		
+		try {
+			moduleArrayObject = mapper.readValue(request.getModuleData(), ENModuleArrayResponse.class);
+			moduleArrayResponse.setItsOk(true);
+			LOGGER.info("Backound: {}", moduleArrayObject.getBackground().getUrl());
+		} catch (Exception e) {
+			e.printStackTrace();
+			moduleArrayResponse.setItsOk(false);
+		}
+		
+		return moduleArrayResponse;
 	}
 }
