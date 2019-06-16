@@ -68,14 +68,16 @@ public class ClientNSolar implements IClientNSolar {
 		energyLifeTimeDatedObject.setStartDate(dateObject.getStartDate());
 		energyLifeTimeDatedObject.setEndDate(dateObject.getEndDate());
 		EnergyLifeTimeDatedResponse response = apiCallOperation.nSolarEnergyLifeTime(energyLifeTimeDatedObject);
+		Double totalGneration = Double.valueOf(df.format(response.getProduction().stream().mapToInt(Integer::intValue).sum() / 1000.0));
 		response.setMayorGeneration(this.getGenerationDate(response, "+"));
 		response.setMinorGeneration(this.getGenerationDate(response, "-"));
-		response.setTotalGeneracion(Double.valueOf(df.format(response.getProduction().stream().mapToInt(Integer::intValue).sum() / 1000.0)));
+		response.setTotalGeneracion(totalGneration);
 		response.setGenerationComparizon(this.getComparisson(energyLifeTimeDatedRequest, response));
 		response.setMetrictsTons(this.getMetricsTons(response));
 		response.setHouses(this.getHouseCount(response));
 		response.setTrees(this.getTreesCount(response));
 		response.setClientExcelObject(clientExcelObject);
+		response.setMediaGeneration(Double.valueOf(df.format( totalGneration / response.getProduction().size())));
 
 		return response;
 	}

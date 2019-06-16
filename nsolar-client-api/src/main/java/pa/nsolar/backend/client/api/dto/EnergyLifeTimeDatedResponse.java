@@ -19,6 +19,7 @@ public class EnergyLifeTimeDatedResponse {
 	private Integer houses;
 	private Integer trees;
 	private ExcelObject clientExcelObject;
+	private Double mediaGeneration;
 
 	public Integer getSystem_id() {
 		return system_id;
@@ -140,6 +141,14 @@ public class EnergyLifeTimeDatedResponse {
 		this.clientExcelObject = clientExcelObject;
 	}
 
+	public Double getMediaGeneration() {
+		return mediaGeneration;
+	}
+
+	public void setMediaGeneration(Double mediaGeneration) {
+		this.mediaGeneration = mediaGeneration;
+	}
+
 	@Override
 	public String toString() {
 		return "EnergyLifeTimeDatedResponse [system_id=" + system_id + ", start_date=" + start_date + ", production="
@@ -147,6 +156,7 @@ public class EnergyLifeTimeDatedResponse {
 				+ micro_production + ", endDate=" + endDate + ", totalGeneracion=" + totalGeneracion
 				+ ", minorGeneration=" + minorGeneration + ", mayorGeneration=" + mayorGeneration
 				+ ", generationComparizon=" + generationComparizon + ", metrictsTons=" + metrictsTons + ", houses="
-				+ houses + ", trees=" + trees + ", clientExcelObject=" + clientExcelObject + "]";
+				+ houses + ", trees=" + trees + ", clientExcelObject=" + clientExcelObject + ", mediaGeneration="
+				+ mediaGeneration + "]";
 	}
 }
