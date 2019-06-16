@@ -1,19 +1,30 @@
 package pa.nsolar.backend.module.services.dto;
 
+import java.util.List;
+
 public class ModuleArrayResponse {
 
-	private Boolean itsOk;
+	private List<CustomArrayObject> systemArrays;
+	private BackgroundObjeect background;
 
-	public Boolean getItsOk() {
-		return itsOk;
+	public List<CustomArrayObject> getSystemArrays() {
+		return systemArrays;
 	}
 
-	public void setItsOk(Boolean itsOk) {
-		this.itsOk = itsOk;
+	public void setSystemArrays(List<CustomArrayObject> systemArrays) {
+		this.systemArrays = systemArrays;
+	}
+
+	public BackgroundObjeect getBackground() {
+		return background;
+	}
+
+	public void setBackground(BackgroundObjeect background) {
+		this.background = background;
 	}
 
 	@Override
 	public String toString() {
-		return "ModuleArrayResponse [itsOk=" + itsOk + "]";
+		return "ModuleArrayResponse [systemArrays=" + systemArrays + ", background=" + background + "]";
 	}
 }
