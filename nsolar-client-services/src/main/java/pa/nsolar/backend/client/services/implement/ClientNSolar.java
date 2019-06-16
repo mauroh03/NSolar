@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
@@ -26,6 +27,7 @@ import pa.nsolar.backend.client.api.dto.EnergyLifeTimeResponse;
 import pa.nsolar.backend.client.api.dto.ExcelObject;
 import pa.nsolar.backend.client.api.dto.GenerationMeasurement;
 import pa.nsolar.backend.client.api.dto.GenerationObject;
+import pa.nsolar.backend.client.api.dto.SystemObject;
 import pa.nsolar.backend.client.services.interfaces.IApiCallOperation;
 import pa.nsolar.backend.client.services.interfaces.IClientNSolar;
 
@@ -42,7 +44,12 @@ public class ClientNSolar implements IClientNSolar {
 
 	@Override
 	public EnergyLifeTimeResponse nSolarClientList() {
-		return apiCallOperation.nSolarClientList();
+		EnergyLifeTimeResponse response = new EnergyLifeTimeResponse();
+		response = apiCallOperation.nSolarClientList();
+		List<SystemObject> clientList = response.getSystems();
+		clientList.sort(Comparator.comparing(SystemObject::getSystem_name));
+		response.setSystems(clientList);
+		return response;
 	}
 
 	@Override
