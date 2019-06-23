@@ -1,0 +1,3833 @@
+{
+    "system_id": 1265055,
+    "rotation": 320,
+    "dimensions": {
+      "x_min": -708,
+      "x_max": 5890,
+      "y_min": -3357,
+      "y_max": 2780
+    },
+    "arrays": [
+      {
+        "array_id": 2022522,
+        "label": "Arreglo 2",
+        "x": 556,
+        "y": 399,
+        "azimuth": 220,
+        "modules": [
+          {
+            "module_id": 27563266,
+            "rotation": 180,
+            "x": 1591,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773547,
+              "serial_num": "121614035128"
+            }
+          },
+          {
+            "module_id": 27563267,
+            "rotation": 180,
+            "x": 1491,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773548,
+              "serial_num": "121614035131"
+            }
+          },
+          {
+            "module_id": 27563268,
+            "rotation": 180,
+            "x": 1391,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773549,
+              "serial_num": "121614035075"
+            }
+          },
+          {
+            "module_id": 27563269,
+            "rotation": 180,
+            "x": 1291,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773550,
+              "serial_num": "121614031085"
+            }
+          },
+          {
+            "module_id": 27563270,
+            "rotation": 180,
+            "x": 1191,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773551,
+              "serial_num": "121614033995"
+            }
+          },
+          {
+            "module_id": 27563271,
+            "rotation": 180,
+            "x": 1091,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773552,
+              "serial_num": "121614036226"
+            }
+          },
+          {
+            "module_id": 27563272,
+            "rotation": 180,
+            "x": 991,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773553,
+              "serial_num": "121614034019"
+            }
+          },
+          {
+            "module_id": 27563273,
+            "rotation": 180,
+            "x": 891,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773554,
+              "serial_num": "121614034248"
+            }
+          },
+          {
+            "module_id": 27563274,
+            "rotation": 180,
+            "x": 791,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773555,
+              "serial_num": "121614028034"
+            }
+          },
+          {
+            "module_id": 27563275,
+            "rotation": 180,
+            "x": 691,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773557,
+              "serial_num": "121614030212"
+            }
+          },
+          {
+            "module_id": 27563276,
+            "rotation": 180,
+            "x": 591,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773560,
+              "serial_num": "121614030237"
+            }
+          },
+          {
+            "module_id": 27563277,
+            "rotation": 180,
+            "x": 491,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773562,
+              "serial_num": "121614028104"
+            }
+          },
+          {
+            "module_id": 27563278,
+            "rotation": 180,
+            "x": 391,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773565,
+              "serial_num": "121614034065"
+            }
+          },
+          {
+            "module_id": 27563279,
+            "rotation": 180,
+            "x": 291,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773569,
+              "serial_num": "121614030346"
+            }
+          },
+          {
+            "module_id": 27563280,
+            "rotation": 180,
+            "x": 191,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773572,
+              "serial_num": "121614028420"
+            }
+          },
+          {
+            "module_id": 27563281,
+            "rotation": 180,
+            "x": 91,
+            "y": -316,
+            "inverter": {
+              "inverter_id": 27773574,
+              "serial_num": "121614034088"
+            }
+          },
+          {
+            "module_id": 27563282,
+            "rotation": 180,
+            "x": -8,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773577,
+              "serial_num": "121614030214"
+            }
+          },
+          {
+            "module_id": 27563283,
+            "rotation": 180,
+            "x": -108,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773582,
+              "serial_num": "121614024383"
+            }
+          },
+          {
+            "module_id": 27563284,
+            "rotation": 180,
+            "x": -208,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773586,
+              "serial_num": "121614031099"
+            }
+          },
+          {
+            "module_id": 27563285,
+            "rotation": 180,
+            "x": -308,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773587,
+              "serial_num": "121614034938"
+            }
+          },
+          {
+            "module_id": 27563286,
+            "rotation": 180,
+            "x": -408,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773588,
+              "serial_num": "121614028418"
+            }
+          },
+          {
+            "module_id": 27563287,
+            "rotation": 180,
+            "x": -508,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773589,
+              "serial_num": "121614028313"
+            }
+          },
+          {
+            "module_id": 27563288,
+            "rotation": 180,
+            "x": -608,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773590,
+              "serial_num": "121614029399"
+            }
+          },
+          {
+            "module_id": 27563289,
+            "rotation": 180,
+            "x": -708,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773591,
+              "serial_num": "121614036266"
+            }
+          },
+          {
+            "module_id": 27563290,
+            "rotation": 180,
+            "x": -808,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773592,
+              "serial_num": "121614033858"
+            }
+          },
+          {
+            "module_id": 27563291,
+            "rotation": 180,
+            "x": -908,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773593,
+              "serial_num": "121614028404"
+            }
+          },
+          {
+            "module_id": 27563292,
+            "rotation": 180,
+            "x": -1008,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773594,
+              "serial_num": "121614035036"
+            }
+          },
+          {
+            "module_id": 27563293,
+            "rotation": 180,
+            "x": -1108,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773595,
+              "serial_num": "121614034590"
+            }
+          },
+          {
+            "module_id": 27563294,
+            "rotation": 180,
+            "x": -1208,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773596,
+              "serial_num": "121614033844"
+            }
+          },
+          {
+            "module_id": 27563295,
+            "rotation": 180,
+            "x": -1308,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773597,
+              "serial_num": "121614035126"
+            }
+          },
+          {
+            "module_id": 27563296,
+            "rotation": 180,
+            "x": -1408,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773598,
+              "serial_num": "121614036261"
+            }
+          },
+          {
+            "module_id": 27563297,
+            "rotation": 180,
+            "x": -1508,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773599,
+              "serial_num": "121614034244"
+            }
+          },
+          {
+            "module_id": 27563298,
+            "rotation": 180,
+            "x": -1608,
+            "y": -315,
+            "inverter": {
+              "inverter_id": 27773600,
+              "serial_num": "121614035160"
+            }
+          },
+          {
+            "module_id": 27563299,
+            "rotation": 180,
+            "x": 1591,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773601,
+              "serial_num": "121614027971"
+            }
+          },
+          {
+            "module_id": 27563300,
+            "rotation": 180,
+            "x": 1491,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773602,
+              "serial_num": "121614034616"
+            }
+          },
+          {
+            "module_id": 27563301,
+            "rotation": 180,
+            "x": 1391,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773603,
+              "serial_num": "121614033940"
+            }
+          },
+          {
+            "module_id": 27563304,
+            "rotation": 180,
+            "x": 1291,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773604,
+              "serial_num": "121614033890"
+            }
+          },
+          {
+            "module_id": 27563309,
+            "rotation": 180,
+            "x": 1191,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773605,
+              "serial_num": "121614028054"
+            }
+          },
+          {
+            "module_id": 27563312,
+            "rotation": 180,
+            "x": 1091,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773606,
+              "serial_num": "121614033941"
+            }
+          },
+          {
+            "module_id": 27563316,
+            "rotation": 180,
+            "x": 991,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773608,
+              "serial_num": "121614034126"
+            }
+          },
+          {
+            "module_id": 27563319,
+            "rotation": 180,
+            "x": 891,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773609,
+              "serial_num": "121614033207"
+            }
+          },
+          {
+            "module_id": 27563322,
+            "rotation": 180,
+            "x": 791,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773610,
+              "serial_num": "121614027161"
+            }
+          },
+          {
+            "module_id": 27563325,
+            "rotation": 180,
+            "x": 691,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773611,
+              "serial_num": "121508021417"
+            }
+          },
+          {
+            "module_id": 27563328,
+            "rotation": 180,
+            "x": 591,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773612,
+              "serial_num": "121509002980"
+            }
+          },
+          {
+            "module_id": 27563332,
+            "rotation": 180,
+            "x": 491,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773613,
+              "serial_num": "121509002049"
+            }
+          },
+          {
+            "module_id": 27563335,
+            "rotation": 180,
+            "x": 391,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773614,
+              "serial_num": "121509002012"
+            }
+          },
+          {
+            "module_id": 27563338,
+            "rotation": 180,
+            "x": 291,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773615,
+              "serial_num": "121509001986"
+            }
+          },
+          {
+            "module_id": 27563341,
+            "rotation": 180,
+            "x": 191,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773616,
+              "serial_num": "121509000022"
+            }
+          },
+          {
+            "module_id": 27563342,
+            "rotation": 180,
+            "x": 91,
+            "y": -516,
+            "inverter": {
+              "inverter_id": 27773617,
+              "serial_num": "121509002948"
+            }
+          },
+          {
+            "module_id": 27563343,
+            "rotation": 180,
+            "x": -8,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773618,
+              "serial_num": "121509000797"
+            }
+          },
+          {
+            "module_id": 27563344,
+            "rotation": 180,
+            "x": -108,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773619,
+              "serial_num": "121509002079"
+            }
+          },
+          {
+            "module_id": 27563345,
+            "rotation": 180,
+            "x": -208,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773620,
+              "serial_num": "121509002774"
+            }
+          },
+          {
+            "module_id": 27563346,
+            "rotation": 180,
+            "x": -308,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773621,
+              "serial_num": "121508020545"
+            }
+          },
+          {
+            "module_id": 27563347,
+            "rotation": 180,
+            "x": -408,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773622,
+              "serial_num": "121509002935"
+            }
+          },
+          {
+            "module_id": 27563348,
+            "rotation": 180,
+            "x": -508,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773623,
+              "serial_num": "121509001843"
+            }
+          },
+          {
+            "module_id": 27563349,
+            "rotation": 180,
+            "x": -608,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773624,
+              "serial_num": "121508017218"
+            }
+          },
+          {
+            "module_id": 27563350,
+            "rotation": 180,
+            "x": -708,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773625,
+              "serial_num": "121509002074"
+            }
+          },
+          {
+            "module_id": 27563351,
+            "rotation": 180,
+            "x": -808,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773626,
+              "serial_num": "121509002946"
+            }
+          },
+          {
+            "module_id": 27563352,
+            "rotation": 180,
+            "x": -908,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773627,
+              "serial_num": "121508021511"
+            }
+          },
+          {
+            "module_id": 27563353,
+            "rotation": 180,
+            "x": -1008,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773628,
+              "serial_num": "121509000790"
+            }
+          },
+          {
+            "module_id": 27563354,
+            "rotation": 180,
+            "x": -1108,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773629,
+              "serial_num": "121509001356"
+            }
+          },
+          {
+            "module_id": 27563355,
+            "rotation": 180,
+            "x": -1208,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773630,
+              "serial_num": "121509001771"
+            }
+          },
+          {
+            "module_id": 27563356,
+            "rotation": 180,
+            "x": -1308,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773631,
+              "serial_num": "121509001625"
+            }
+          },
+          {
+            "module_id": 27563357,
+            "rotation": 180,
+            "x": -1408,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773632,
+              "serial_num": "121509001532"
+            }
+          },
+          {
+            "module_id": 27563358,
+            "rotation": 180,
+            "x": -1508,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773633,
+              "serial_num": "121509001906"
+            }
+          },
+          {
+            "module_id": 27563359,
+            "rotation": 180,
+            "x": -1608,
+            "y": -515,
+            "inverter": {
+              "inverter_id": 27773634,
+              "serial_num": "121509002985"
+            }
+          },
+          {
+            "module_id": 27563360,
+            "rotation": 180,
+            "x": 1590,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773635,
+              "serial_num": "121614027969"
+            }
+          },
+          {
+            "module_id": 27563361,
+            "rotation": 180,
+            "x": 1490,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773636,
+              "serial_num": "121614033936"
+            }
+          },
+          {
+            "module_id": 27563362,
+            "rotation": 180,
+            "x": 1390,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773637,
+              "serial_num": "121614034946"
+            }
+          },
+          {
+            "module_id": 27563363,
+            "rotation": 180,
+            "x": 1290,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773638,
+              "serial_num": "121614033997"
+            }
+          },
+          {
+            "module_id": 27563364,
+            "rotation": 180,
+            "x": 1190,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773639,
+              "serial_num": "121614033290"
+            }
+          },
+          {
+            "module_id": 27563365,
+            "rotation": 180,
+            "x": 1090,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773640,
+              "serial_num": "121614035196"
+            }
+          },
+          {
+            "module_id": 27563366,
+            "rotation": 180,
+            "x": 990,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773641,
+              "serial_num": "121614035185"
+            }
+          },
+          {
+            "module_id": 27563367,
+            "rotation": 180,
+            "x": 890,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773642,
+              "serial_num": "121614028095"
+            }
+          },
+          {
+            "module_id": 27563368,
+            "rotation": 180,
+            "x": 790,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773643,
+              "serial_num": "121614027157"
+            }
+          },
+          {
+            "module_id": 27563369,
+            "rotation": 180,
+            "x": 690,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773644,
+              "serial_num": "121614029371"
+            }
+          },
+          {
+            "module_id": 27563370,
+            "rotation": 180,
+            "x": 590,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773645,
+              "serial_num": "121614023279"
+            }
+          },
+          {
+            "module_id": 27563371,
+            "rotation": 180,
+            "x": 490,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773646,
+              "serial_num": "121614029364"
+            }
+          },
+          {
+            "module_id": 27563372,
+            "rotation": 180,
+            "x": 390,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773647,
+              "serial_num": "121614029370"
+            }
+          },
+          {
+            "module_id": 27563373,
+            "rotation": 180,
+            "x": 290,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773648,
+              "serial_num": "121614029352"
+            }
+          },
+          {
+            "module_id": 27563374,
+            "rotation": 180,
+            "x": 190,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773649,
+              "serial_num": "121614029351"
+            }
+          },
+          {
+            "module_id": 27563375,
+            "rotation": 180,
+            "x": 90,
+            "y": -716,
+            "inverter": {
+              "inverter_id": 27773650,
+              "serial_num": "121614024545"
+            }
+          },
+          {
+            "module_id": 27563376,
+            "rotation": 180,
+            "x": -9,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773651,
+              "serial_num": "121614023921"
+            }
+          },
+          {
+            "module_id": 27563377,
+            "rotation": 180,
+            "x": -109,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773652,
+              "serial_num": "121614029378"
+            }
+          },
+          {
+            "module_id": 27563378,
+            "rotation": 180,
+            "x": -209,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773653,
+              "serial_num": "121614028417"
+            }
+          },
+          {
+            "module_id": 27563379,
+            "rotation": 180,
+            "x": -309,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773654,
+              "serial_num": "121614024528"
+            }
+          },
+          {
+            "module_id": 27563380,
+            "rotation": 180,
+            "x": -409,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773655,
+              "serial_num": "121614023924"
+            }
+          },
+          {
+            "module_id": 27563381,
+            "rotation": 180,
+            "x": -509,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773656,
+              "serial_num": "121614029430"
+            }
+          },
+          {
+            "module_id": 27563382,
+            "rotation": 180,
+            "x": -609,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773657,
+              "serial_num": "121614023698"
+            }
+          },
+          {
+            "module_id": 27563383,
+            "rotation": 180,
+            "x": -709,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773658,
+              "serial_num": "121614028664"
+            }
+          },
+          {
+            "module_id": 27563384,
+            "rotation": 180,
+            "x": -809,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773659,
+              "serial_num": "121614023775"
+            }
+          },
+          {
+            "module_id": 27563385,
+            "rotation": 180,
+            "x": -909,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773660,
+              "serial_num": "121614029449"
+            }
+          },
+          {
+            "module_id": 27563386,
+            "rotation": 180,
+            "x": -1009,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773661,
+              "serial_num": "121614029450"
+            }
+          },
+          {
+            "module_id": 27563387,
+            "rotation": 180,
+            "x": -1109,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773662,
+              "serial_num": "121614029356"
+            }
+          },
+          {
+            "module_id": 27563388,
+            "rotation": 180,
+            "x": -1209,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773663,
+              "serial_num": "121614029349"
+            }
+          },
+          {
+            "module_id": 27563389,
+            "rotation": 180,
+            "x": -1309,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773664,
+              "serial_num": "121614029357"
+            }
+          },
+          {
+            "module_id": 27563390,
+            "rotation": 180,
+            "x": -1409,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773665,
+              "serial_num": "121614029350"
+            }
+          },
+          {
+            "module_id": 27563391,
+            "rotation": 180,
+            "x": -1509,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773666,
+              "serial_num": "121614029367"
+            }
+          },
+          {
+            "module_id": 27563392,
+            "rotation": 180,
+            "x": -1609,
+            "y": -715,
+            "inverter": {
+              "inverter_id": 27773667,
+              "serial_num": "121614029358"
+            }
+          }
+        ],
+        "dimensions": {
+          "x_min": -147,
+          "x_max": 3745,
+          "y_min": -1071,
+          "y_max": 2780
+        }
+      },
+      {
+        "array_id": 2022526,
+        "label": "Arreglo 3",
+        "x": 383,
+        "y": 123,
+        "azimuth": 220,
+        "modules": [
+          {
+            "module_id": 27563514,
+            "rotation": 180,
+            "x": 1300,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773787,
+              "serial_num": "121614034305"
+            }
+          },
+          {
+            "module_id": 27563515,
+            "rotation": 180,
+            "x": 1200,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773788,
+              "serial_num": "121614034889"
+            }
+          },
+          {
+            "module_id": 27563516,
+            "rotation": 180,
+            "x": 1100,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773789,
+              "serial_num": "121614034721"
+            }
+          },
+          {
+            "module_id": 27563517,
+            "rotation": 180,
+            "x": 1000,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773790,
+              "serial_num": "121614034308"
+            }
+          },
+          {
+            "module_id": 27563518,
+            "rotation": 180,
+            "x": 900,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773791,
+              "serial_num": "121614035119"
+            }
+          },
+          {
+            "module_id": 27563519,
+            "rotation": 180,
+            "x": 800,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773792,
+              "serial_num": "121614033201"
+            }
+          },
+          {
+            "module_id": 27563520,
+            "rotation": 180,
+            "x": 700,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773793,
+              "serial_num": "121614034276"
+            }
+          },
+          {
+            "module_id": 27563521,
+            "rotation": 180,
+            "x": 600,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773794,
+              "serial_num": "121614034247"
+            }
+          },
+          {
+            "module_id": 27563522,
+            "rotation": 180,
+            "x": 500,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773795,
+              "serial_num": "121614033852"
+            }
+          },
+          {
+            "module_id": 27563523,
+            "rotation": 180,
+            "x": 400,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773796,
+              "serial_num": "121614035112"
+            }
+          },
+          {
+            "module_id": 27563524,
+            "rotation": 180,
+            "x": 300,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773797,
+              "serial_num": "121614033857"
+            }
+          },
+          {
+            "module_id": 27563525,
+            "rotation": 180,
+            "x": 200,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773798,
+              "serial_num": "121614035130"
+            }
+          },
+          {
+            "module_id": 27563526,
+            "rotation": 180,
+            "x": 100,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773799,
+              "serial_num": "121614030182"
+            }
+          },
+          {
+            "module_id": 27563527,
+            "rotation": 180,
+            "x": 0,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773800,
+              "serial_num": "121614035159"
+            }
+          },
+          {
+            "module_id": 27563528,
+            "rotation": 180,
+            "x": -100,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773801,
+              "serial_num": "121614028112"
+            }
+          },
+          {
+            "module_id": 27563529,
+            "rotation": 180,
+            "x": -200,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773802,
+              "serial_num": "121614034062"
+            }
+          },
+          {
+            "module_id": 27563530,
+            "rotation": 180,
+            "x": -300,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773803,
+              "serial_num": "121614034270"
+            }
+          },
+          {
+            "module_id": 27563531,
+            "rotation": 180,
+            "x": -400,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773804,
+              "serial_num": "121614034274"
+            }
+          },
+          {
+            "module_id": 27563532,
+            "rotation": 180,
+            "x": -500,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773805,
+              "serial_num": "121614027941"
+            }
+          },
+          {
+            "module_id": 27563533,
+            "rotation": 180,
+            "x": -600,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773806,
+              "serial_num": "121614028107"
+            }
+          },
+          {
+            "module_id": 27563534,
+            "rotation": 180,
+            "x": -700,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773807,
+              "serial_num": "121614033932"
+            }
+          },
+          {
+            "module_id": 27563535,
+            "rotation": 180,
+            "x": -800,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773808,
+              "serial_num": "121614028028"
+            }
+          },
+          {
+            "module_id": 27563536,
+            "rotation": 180,
+            "x": -900,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773809,
+              "serial_num": "121614034096"
+            }
+          },
+          {
+            "module_id": 27563537,
+            "rotation": 180,
+            "x": -1000,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773810,
+              "serial_num": "121614033331"
+            }
+          },
+          {
+            "module_id": 27563538,
+            "rotation": 180,
+            "x": -1100,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773811,
+              "serial_num": "121614034243"
+            }
+          },
+          {
+            "module_id": 27563539,
+            "rotation": 180,
+            "x": -1200,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773812,
+              "serial_num": "121614034951"
+            }
+          },
+          {
+            "module_id": 27563540,
+            "rotation": 180,
+            "x": -1300,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773813,
+              "serial_num": "121614034250"
+            }
+          }
+        ],
+        "dimensions": {
+          "x_min": 50,
+          "x_max": 2946,
+          "y_min": -159,
+          "y_max": 2699
+        }
+      },
+      {
+        "array_id": 2022527,
+        "label": "Arreglo 4",
+        "x": 1553,
+        "y": 1375,
+        "azimuth": 220,
+        "modules": [
+          {
+            "module_id": 27563542,
+            "rotation": 180,
+            "x": 200,
+            "y": 199,
+            "inverter": {
+              "inverter_id": 27773814,
+              "serial_num": "121614034237"
+            }
+          },
+          {
+            "module_id": 27563543,
+            "rotation": 180,
+            "x": 100,
+            "y": 199,
+            "inverter": {
+              "inverter_id": 27773815,
+              "serial_num": "121614035230"
+            }
+          },
+          {
+            "module_id": 27563544,
+            "rotation": 180,
+            "x": 0,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773816,
+              "serial_num": "121614033211"
+            }
+          },
+          {
+            "module_id": 27563545,
+            "rotation": 180,
+            "x": -99,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773817,
+              "serial_num": "121614035111"
+            }
+          },
+          {
+            "module_id": 27563546,
+            "rotation": 180,
+            "x": -199,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773818,
+              "serial_num": "121614034254"
+            }
+          },
+          {
+            "module_id": 27563547,
+            "rotation": 180,
+            "x": 200,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773819,
+              "serial_num": "121614028032"
+            }
+          },
+          {
+            "module_id": 27563548,
+            "rotation": 180,
+            "x": 100,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773820,
+              "serial_num": "121614027154"
+            }
+          },
+          {
+            "module_id": 27563549,
+            "rotation": 180,
+            "x": 0,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773821,
+              "serial_num": "121614034020"
+            }
+          },
+          {
+            "module_id": 27563550,
+            "rotation": 180,
+            "x": -100,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773822,
+              "serial_num": "121614027156"
+            }
+          },
+          {
+            "module_id": 27563551,
+            "rotation": 180,
+            "x": -200,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773823,
+              "serial_num": "121614032633"
+            }
+          },
+          {
+            "module_id": 27563552,
+            "rotation": 180,
+            "x": 199,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773824,
+              "serial_num": "121614034961"
+            }
+          },
+          {
+            "module_id": 27563553,
+            "rotation": 180,
+            "x": 99,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773825,
+              "serial_num": "121614033840"
+            }
+          },
+          {
+            "module_id": 27563554,
+            "rotation": 180,
+            "x": 0,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773826,
+              "serial_num": "121614033870"
+            }
+          },
+          {
+            "module_id": 27563555,
+            "rotation": 180,
+            "x": -100,
+            "y": -199,
+            "inverter": {
+              "inverter_id": 27773827,
+              "serial_num": "121614033836"
+            }
+          },
+          {
+            "module_id": 27563556,
+            "rotation": 180,
+            "x": -200,
+            "y": -199,
+            "inverter": {
+              "inverter_id": 27773828,
+              "serial_num": "121614034273"
+            }
+          }
+        ],
+        "dimensions": {
+          "x_min": 2653,
+          "x_max": 3744,
+          "y_min": 931,
+          "y_max": 2023
+        }
+      },
+      {
+        "array_id": 2022528,
+        "label": "Arreglo 7",
+        "x": 900,
+        "y": -3001,
+        "azimuth": 310,
+        "modules": [
+          {
+            "module_id": 27563558,
+            "rotation": 0,
+            "x": -250,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773829,
+              "serial_num": "121614036314"
+            }
+          },
+          {
+            "module_id": 27563559,
+            "rotation": 0,
+            "x": -150,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773830,
+              "serial_num": "121614030341"
+            }
+          },
+          {
+            "module_id": 27563560,
+            "rotation": 0,
+            "x": -50,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773831,
+              "serial_num": "121614034300"
+            }
+          },
+          {
+            "module_id": 27563561,
+            "rotation": 0,
+            "x": 50,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773832,
+              "serial_num": "121614035121"
+            }
+          },
+          {
+            "module_id": 27563562,
+            "rotation": 0,
+            "x": 150,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773833,
+              "serial_num": "121614036292"
+            }
+          },
+          {
+            "module_id": 27563563,
+            "rotation": 0,
+            "x": -350,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773834,
+              "serial_num": "121614034576"
+            }
+          },
+          {
+            "module_id": 27563564,
+            "rotation": 0,
+            "x": -250,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773835,
+              "serial_num": "121614030347"
+            }
+          },
+          {
+            "module_id": 27563565,
+            "rotation": 0,
+            "x": -150,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773836,
+              "serial_num": "121614034258"
+            }
+          },
+          {
+            "module_id": 27563566,
+            "rotation": 0,
+            "x": -50,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773837,
+              "serial_num": "121614034272"
+            }
+          },
+          {
+            "module_id": 27563567,
+            "rotation": 0,
+            "x": 50,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773838,
+              "serial_num": "121614028088"
+            }
+          },
+          {
+            "module_id": 27563568,
+            "rotation": 0,
+            "x": 150,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773839,
+              "serial_num": "121614030176"
+            }
+          },
+          {
+            "module_id": 27563569,
+            "rotation": 0,
+            "x": 250,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773840,
+              "serial_num": "121614027220"
+            }
+          },
+          {
+            "module_id": 27563570,
+            "rotation": 0,
+            "x": 350,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773841,
+              "serial_num": "121614035012"
+            }
+          }
+        ],
+        "dimensions": {
+          "x_min": -708,
+          "x_max": 479,
+          "y_min": -2052,
+          "y_max": -859
+        }
+      },
+      {
+        "array_id": 2022530,
+        "label": "Arreglo 6",
+        "x": 815,
+        "y": -2413,
+        "azimuth": 220,
+        "modules": [
+          {
+            "module_id": 27563575,
+            "rotation": 180,
+            "x": 100,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773844,
+              "serial_num": "121614033839"
+            }
+          },
+          {
+            "module_id": 27563578,
+            "rotation": 180,
+            "x": 0,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773847,
+              "serial_num": "121614036265"
+            }
+          },
+          {
+            "module_id": 27563580,
+            "rotation": 180,
+            "x": -99,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773849,
+              "serial_num": "121614034259"
+            }
+          },
+          {
+            "module_id": 27563582,
+            "rotation": 180,
+            "x": 0,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773851,
+              "serial_num": "121614035129"
+            }
+          }
+        ],
+        "dimensions": {
+          "x_min": -147,
+          "x_max": 546,
+          "y_min": -1398,
+          "y_max": -703
+        }
+      },
+      {
+        "array_id": 2022531,
+        "label": "Arreglo 8",
+        "x": 1440,
+        "y": -3118,
+        "azimuth": 40,
+        "modules": [
+          {
+            "module_id": 27563589,
+            "rotation": 0,
+            "x": 0,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773857,
+              "serial_num": "121614036291"
+            }
+          },
+          {
+            "module_id": 27563591,
+            "rotation": 0,
+            "x": -100,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773859,
+              "serial_num": "121614034303"
+            }
+          },
+          {
+            "module_id": 27563593,
+            "rotation": 0,
+            "x": 0,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773861,
+              "serial_num": "121614034888"
+            }
+          },
+          {
+            "module_id": 27563595,
+            "rotation": 0,
+            "x": 100,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773863,
+              "serial_num": "121614030183"
+            }
+          }
+        ],
+        "dimensions": {
+          "x_min": -123,
+          "x_max": 571,
+          "y_min": -2240,
+          "y_max": -1545
+        }
+      },
+      {
+        "array_id": 2022532,
+        "label": "Arreglo 5",
+        "x": 3350,
+        "y": -296,
+        "azimuth": 130,
+        "modules": [
+          {
+            "module_id": 27563600,
+            "rotation": 0,
+            "x": -400,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773867,
+              "serial_num": "121614033869"
+            }
+          },
+          {
+            "module_id": 27563602,
+            "rotation": 0,
+            "x": -300,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773869,
+              "serial_num": "121614035070"
+            }
+          },
+          {
+            "module_id": 27563604,
+            "rotation": 0,
+            "x": -200,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773871,
+              "serial_num": "121614034955"
+            }
+          },
+          {
+            "module_id": 27563605,
+            "rotation": 0,
+            "x": -100,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773872,
+              "serial_num": "121614033971"
+            }
+          },
+          {
+            "module_id": 27563606,
+            "rotation": 0,
+            "x": 0,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773873,
+              "serial_num": "121614033277"
+            }
+          },
+          {
+            "module_id": 27563607,
+            "rotation": 0,
+            "x": 100,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773874,
+              "serial_num": "121614034260"
+            }
+          },
+          {
+            "module_id": 27563608,
+            "rotation": 0,
+            "x": 200,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773875,
+              "serial_num": "121614033835"
+            }
+          },
+          {
+            "module_id": 27563609,
+            "rotation": 0,
+            "x": 300,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773876,
+              "serial_num": "121614034194"
+            }
+          },
+          {
+            "module_id": 27563611,
+            "rotation": 0,
+            "x": 400,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773877,
+              "serial_num": "121614034193"
+            }
+          },
+          {
+            "module_id": 27563612,
+            "rotation": 0,
+            "x": 500,
+            "y": -100,
+            "inverter": {
+              "inverter_id": 27773878,
+              "serial_num": "121614034956"
+            }
+          },
+          {
+            "module_id": 27563614,
+            "rotation": 0,
+            "x": -500,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773880,
+              "serial_num": "121509001742"
+            }
+          },
+          {
+            "module_id": 27563616,
+            "rotation": 0,
+            "x": -400,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773882,
+              "serial_num": "121509002827"
+            }
+          },
+          {
+            "module_id": 27563618,
+            "rotation": 0,
+            "x": -300,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773884,
+              "serial_num": "121509001540"
+            }
+          },
+          {
+            "module_id": 27563620,
+            "rotation": 0,
+            "x": -200,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773886,
+              "serial_num": "121509001399"
+            }
+          },
+          {
+            "module_id": 27563622,
+            "rotation": 0,
+            "x": -100,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773888,
+              "serial_num": "121509001957"
+            }
+          },
+          {
+            "module_id": 27563624,
+            "rotation": 0,
+            "x": 0,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773890,
+              "serial_num": "121508021216"
+            }
+          },
+          {
+            "module_id": 27563625,
+            "rotation": 0,
+            "x": 100,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773891,
+              "serial_num": "121509002706"
+            }
+          },
+          {
+            "module_id": 27563626,
+            "rotation": 0,
+            "x": 200,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773892,
+              "serial_num": "121509002522"
+            }
+          },
+          {
+            "module_id": 27563627,
+            "rotation": 0,
+            "x": 300,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773893,
+              "serial_num": "121509002174"
+            }
+          },
+          {
+            "module_id": 27563628,
+            "rotation": 0,
+            "x": 400,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773894,
+              "serial_num": "121508020873"
+            }
+          },
+          {
+            "module_id": 27563629,
+            "rotation": 0,
+            "x": 500,
+            "y": 100,
+            "inverter": {
+              "inverter_id": 27773895,
+              "serial_num": "121508016237"
+            }
+          }
+        ],
+        "dimensions": {
+          "x_min": 2759,
+          "x_max": 4243,
+          "y_min": -1705,
+          "y_max": -211
+        }
+      },
+      {
+        "array_id": 2022534,
+        "label": "Arreglo 9",
+        "x": 4941,
+        "y": -180,
+        "azimuth": 220,
+        "modules": [
+          {
+            "module_id": 27563631,
+            "rotation": 0,
+            "x": -749,
+            "y": -198,
+            "inverter": {
+              "inverter_id": 27773896,
+              "serial_num": "121614033834"
+            }
+          },
+          {
+            "module_id": 27563632,
+            "rotation": 0,
+            "x": -649,
+            "y": -198,
+            "inverter": {
+              "inverter_id": 27773897,
+              "serial_num": "121614035179"
+            }
+          },
+          {
+            "module_id": 27563633,
+            "rotation": 0,
+            "x": -549,
+            "y": -198,
+            "inverter": {
+              "inverter_id": 27773898,
+              "serial_num": "121614026984"
+            }
+          },
+          {
+            "module_id": 27563634,
+            "rotation": 0,
+            "x": -449,
+            "y": -198,
+            "inverter": {
+              "inverter_id": 27773899,
+              "serial_num": "121614033832"
+            }
+          },
+          {
+            "module_id": 27563635,
+            "rotation": 0,
+            "x": -349,
+            "y": -198,
+            "inverter": {
+              "inverter_id": 27773900,
+              "serial_num": "121614035120"
+            }
+          },
+          {
+            "module_id": 27563636,
+            "rotation": 0,
+            "x": -249,
+            "y": -198,
+            "inverter": {
+              "inverter_id": 27773901,
+              "serial_num": "121614034307"
+            }
+          },
+          {
+            "module_id": 27563637,
+            "rotation": 0,
+            "x": -149,
+            "y": -198,
+            "inverter": {
+              "inverter_id": 27773902,
+              "serial_num": "121614033831"
+            }
+          },
+          {
+            "module_id": 27563638,
+            "rotation": 0,
+            "x": -49,
+            "y": -198,
+            "inverter": {
+              "inverter_id": 27773903,
+              "serial_num": "121614035080"
+            }
+          },
+          {
+            "module_id": 27563639,
+            "rotation": 0,
+            "x": 49,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773904,
+              "serial_num": "121614035180"
+            }
+          },
+          {
+            "module_id": 27563640,
+            "rotation": 0,
+            "x": 149,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773905,
+              "serial_num": "121614036262"
+            }
+          },
+          {
+            "module_id": 27563641,
+            "rotation": 0,
+            "x": 249,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773906,
+              "serial_num": "121614028092"
+            }
+          },
+          {
+            "module_id": 27563642,
+            "rotation": 0,
+            "x": 349,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773907,
+              "serial_num": "121614036237"
+            }
+          },
+          {
+            "module_id": 27563643,
+            "rotation": 0,
+            "x": 449,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773908,
+              "serial_num": "121508016937"
+            }
+          },
+          {
+            "module_id": 27563644,
+            "rotation": 0,
+            "x": 549,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773909,
+              "serial_num": "121509002824"
+            }
+          },
+          {
+            "module_id": 27563645,
+            "rotation": 0,
+            "x": 649,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773910,
+              "serial_num": "121509001577"
+            }
+          },
+          {
+            "module_id": 27563646,
+            "rotation": 0,
+            "x": 749,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773911,
+              "serial_num": "121509000019"
+            }
+          },
+          {
+            "module_id": 27563647,
+            "rotation": 0,
+            "x": -749,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773912,
+              "serial_num": "121614035166"
+            }
+          },
+          {
+            "module_id": 27563648,
+            "rotation": 0,
+            "x": -649,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773913,
+              "serial_num": "121614034238"
+            }
+          },
+          {
+            "module_id": 27563649,
+            "rotation": 0,
+            "x": -549,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773914,
+              "serial_num": "121614033296"
+            }
+          },
+          {
+            "module_id": 27563650,
+            "rotation": 0,
+            "x": -449,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773915,
+              "serial_num": "121614028096"
+            }
+          },
+          {
+            "module_id": 27563651,
+            "rotation": 0,
+            "x": -349,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773916,
+              "serial_num": "121614033849"
+            }
+          },
+          {
+            "module_id": 27563652,
+            "rotation": 0,
+            "x": -249,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773917,
+              "serial_num": "121614033295"
+            }
+          },
+          {
+            "module_id": 27563653,
+            "rotation": 0,
+            "x": -149,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773918,
+              "serial_num": "121614033970"
+            }
+          },
+          {
+            "module_id": 27563654,
+            "rotation": 0,
+            "x": -49,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773919,
+              "serial_num": "121614034937"
+            }
+          },
+          {
+            "module_id": 27563655,
+            "rotation": 0,
+            "x": 49,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 28152668,
+              "serial_num": "121614034032"
+            }
+          },
+          {
+            "module_id": 27563656,
+            "rotation": 0,
+            "x": 149,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 28153262,
+              "serial_num": "121614033340"
+            }
+          },
+          {
+            "module_id": 27563657,
+            "rotation": 0,
+            "x": 249,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 28153123,
+              "serial_num": "121614033328"
+            }
+          },
+          {
+            "module_id": 27563658,
+            "rotation": 0,
+            "x": 350,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773923,
+              "serial_num": "121508021566"
+            }
+          },
+          {
+            "module_id": 27563659,
+            "rotation": 0,
+            "x": 450,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773924,
+              "serial_num": "121509001213"
+            }
+          },
+          {
+            "module_id": 27563660,
+            "rotation": 0,
+            "x": 550,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773925,
+              "serial_num": "121509002598"
+            }
+          },
+          {
+            "module_id": 27563661,
+            "rotation": 0,
+            "x": 650,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773926,
+              "serial_num": "121509002274"
+            }
+          },
+          {
+            "module_id": 27563662,
+            "rotation": 0,
+            "x": 750,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773927,
+              "serial_num": "121509001733"
+            }
+          },
+          {
+            "module_id": 27563663,
+            "rotation": 0,
+            "x": -748,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 28153001,
+              "serial_num": "121614033241"
+            }
+          },
+          {
+            "module_id": 27563664,
+            "rotation": 0,
+            "x": -648,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773929,
+              "serial_num": "121614036258"
+            }
+          },
+          {
+            "module_id": 27563665,
+            "rotation": 0,
+            "x": -548,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773930,
+              "serial_num": "121614028099"
+            }
+          },
+          {
+            "module_id": 27563666,
+            "rotation": 0,
+            "x": -448,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773931,
+              "serial_num": "121614027959"
+            }
+          },
+          {
+            "module_id": 27563667,
+            "rotation": 0,
+            "x": -348,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773932,
+              "serial_num": "121614035132"
+            }
+          },
+          {
+            "module_id": 27563668,
+            "rotation": 0,
+            "x": -248,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773933,
+              "serial_num": "121614027975"
+            }
+          },
+          {
+            "module_id": 27563669,
+            "rotation": 0,
+            "x": -148,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773934,
+              "serial_num": "121614033851"
+            }
+          },
+          {
+            "module_id": 27563670,
+            "rotation": 0,
+            "x": -48,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773935,
+              "serial_num": "121614034128"
+            }
+          },
+          {
+            "module_id": 27563671,
+            "rotation": 0,
+            "x": 50,
+            "y": 198,
+            "inverter": {
+              "inverter_id": 27773936,
+              "serial_num": "121614027945"
+            }
+          },
+          {
+            "module_id": 27563672,
+            "rotation": 0,
+            "x": 150,
+            "y": 198,
+            "inverter": {
+              "inverter_id": 27773937,
+              "serial_num": "121614030243"
+            }
+          },
+          {
+            "module_id": 27563673,
+            "rotation": 0,
+            "x": 250,
+            "y": 198,
+            "inverter": {
+              "inverter_id": 27773938,
+              "serial_num": "121614028087"
+            }
+          },
+          {
+            "module_id": 27563674,
+            "rotation": 0,
+            "x": 350,
+            "y": 198,
+            "inverter": {
+              "inverter_id": 27773939,
+              "serial_num": "121614036234"
+            }
+          },
+          {
+            "module_id": 27563675,
+            "rotation": 0,
+            "x": 450,
+            "y": 198,
+            "inverter": {
+              "inverter_id": 27773940,
+              "serial_num": "121614033874"
+            }
+          },
+          {
+            "module_id": 27563676,
+            "rotation": 0,
+            "x": 550,
+            "y": 198,
+            "inverter": {
+              "inverter_id": 27773941,
+              "serial_num": "121614034947"
+            }
+          },
+          {
+            "module_id": 27563677,
+            "rotation": 0,
+            "x": 650,
+            "y": 198,
+            "inverter": {
+              "inverter_id": 27773942,
+              "serial_num": "121614033928"
+            }
+          },
+          {
+            "module_id": 27563678,
+            "rotation": 0,
+            "x": 750,
+            "y": 198,
+            "inverter": {
+              "inverter_id": 27773943,
+              "serial_num": "121614036233"
+            }
+          }
+        ],
+        "dimensions": {
+          "x_min": 3700,
+          "x_max": 5890,
+          "y_min": -2979,
+          "y_max": -805
+        }
+      },
+      {
+        "array_id": 2022535,
+        "label": "Arreglo 10",
+        "x": 3317,
+        "y": -2293,
+        "azimuth": 40,
+        "modules": [
+          {
+            "module_id": 27563680,
+            "rotation": 0,
+            "x": -550,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773944,
+              "serial_num": "121614035283"
+            }
+          },
+          {
+            "module_id": 27563681,
+            "rotation": 0,
+            "x": -450,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773945,
+              "serial_num": "121614035402"
+            }
+          },
+          {
+            "module_id": 27563682,
+            "rotation": 0,
+            "x": -350,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773946,
+              "serial_num": "121614035884"
+            }
+          },
+          {
+            "module_id": 27563683,
+            "rotation": 0,
+            "x": -250,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773947,
+              "serial_num": "121614034495"
+            }
+          },
+          {
+            "module_id": 27563684,
+            "rotation": 0,
+            "x": -150,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773948,
+              "serial_num": "121614035147"
+            }
+          },
+          {
+            "module_id": 27563685,
+            "rotation": 0,
+            "x": -50,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773949,
+              "serial_num": "121614027152"
+            }
+          },
+          {
+            "module_id": 27563686,
+            "rotation": 0,
+            "x": 50,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773950,
+              "serial_num": "121614035269"
+            }
+          },
+          {
+            "module_id": 27563687,
+            "rotation": 0,
+            "x": 150,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773951,
+              "serial_num": "121614035408"
+            }
+          },
+          {
+            "module_id": 27563688,
+            "rotation": 0,
+            "x": 250,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773952,
+              "serial_num": "121614035303"
+            }
+          },
+          {
+            "module_id": 27563689,
+            "rotation": 0,
+            "x": 350,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773953,
+              "serial_num": "121614034516"
+            }
+          },
+          {
+            "module_id": 27563690,
+            "rotation": 0,
+            "x": 450,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773954,
+              "serial_num": "121614035409"
+            }
+          },
+          {
+            "module_id": 27563691,
+            "rotation": 0,
+            "x": 550,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773955,
+              "serial_num": "121614035318"
+            }
+          },
+          {
+            "module_id": 27563692,
+            "rotation": 0,
+            "x": -550,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773956,
+              "serial_num": "121614036299"
+            }
+          },
+          {
+            "module_id": 27563693,
+            "rotation": 0,
+            "x": -450,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773957,
+              "serial_num": "121614033957"
+            }
+          },
+          {
+            "module_id": 27563694,
+            "rotation": 0,
+            "x": -350,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773958,
+              "serial_num": "121614034486"
+            }
+          },
+          {
+            "module_id": 27563695,
+            "rotation": 0,
+            "x": -250,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773959,
+              "serial_num": "121614035186"
+            }
+          },
+          {
+            "module_id": 27563696,
+            "rotation": 0,
+            "x": -150,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773960,
+              "serial_num": "121614034573"
+            }
+          },
+          {
+            "module_id": 27563697,
+            "rotation": 0,
+            "x": -50,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773961,
+              "serial_num": "121614034580"
+            }
+          },
+          {
+            "module_id": 27563698,
+            "rotation": 0,
+            "x": 50,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773962,
+              "serial_num": "121614035011"
+            }
+          },
+          {
+            "module_id": 27563699,
+            "rotation": 0,
+            "x": 150,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773963,
+              "serial_num": "121614034570"
+            }
+          },
+          {
+            "module_id": 27563700,
+            "rotation": 0,
+            "x": 250,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773964,
+              "serial_num": "121614036221"
+            }
+          },
+          {
+            "module_id": 27563701,
+            "rotation": 0,
+            "x": 350,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773965,
+              "serial_num": "121614034575"
+            }
+          },
+          {
+            "module_id": 27563702,
+            "rotation": 0,
+            "x": 450,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773966,
+              "serial_num": "121614034602"
+            }
+          },
+          {
+            "module_id": 27563703,
+            "rotation": 0,
+            "x": 550,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773967,
+              "serial_num": "121614030178"
+            }
+          },
+          {
+            "module_id": 27563704,
+            "rotation": 0,
+            "x": -550,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773968,
+              "serial_num": "121614035144"
+            }
+          },
+          {
+            "module_id": 27563705,
+            "rotation": 0,
+            "x": -450,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773969,
+              "serial_num": "121614035146"
+            }
+          },
+          {
+            "module_id": 27563706,
+            "rotation": 0,
+            "x": -350,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773970,
+              "serial_num": "121614035604"
+            }
+          },
+          {
+            "module_id": 27563707,
+            "rotation": 0,
+            "x": -250,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773971,
+              "serial_num": "121614035292"
+            }
+          },
+          {
+            "module_id": 27563708,
+            "rotation": 0,
+            "x": -150,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773972,
+              "serial_num": "121614027942"
+            }
+          },
+          {
+            "module_id": 27563709,
+            "rotation": 0,
+            "x": -50,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773973,
+              "serial_num": "121614035148"
+            }
+          },
+          {
+            "module_id": 27563710,
+            "rotation": 0,
+            "x": 50,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773974,
+              "serial_num": "121614035145"
+            }
+          },
+          {
+            "module_id": 27563711,
+            "rotation": 0,
+            "x": 150,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773975,
+              "serial_num": "121614035150"
+            }
+          },
+          {
+            "module_id": 27563712,
+            "rotation": 0,
+            "x": 250,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773976,
+              "serial_num": "121614035149"
+            }
+          },
+          {
+            "module_id": 27563713,
+            "rotation": 0,
+            "x": 350,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773977,
+              "serial_num": "121614035221"
+            }
+          },
+          {
+            "module_id": 27563714,
+            "rotation": 0,
+            "x": 450,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773978,
+              "serial_num": "121614034496"
+            }
+          },
+          {
+            "module_id": 27563715,
+            "rotation": 0,
+            "x": 550,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773979,
+              "serial_num": "121614034494"
+            }
+          }
+        ],
+        "dimensions": {
+          "x_min": 1298,
+          "x_max": 3087,
+          "y_min": -3357,
+          "y_max": -1577
+        }
+      },
+      {
+        "array_id": 2582404,
+        "label": "Arreglo 1",
+        "x": 1302,
+        "y": -485,
+        "azimuth": 40,
+        "modules": [
+          {
+            "module_id": 34184974,
+            "rotation": 0,
+            "x": -1600,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773668,
+              "serial_num": "121614031089"
+            }
+          },
+          {
+            "module_id": 34184976,
+            "rotation": 0,
+            "x": -1500,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773669,
+              "serial_num": "121614034252"
+            }
+          },
+          {
+            "module_id": 34184979,
+            "rotation": 0,
+            "x": -1400,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773670,
+              "serial_num": "121614034943"
+            }
+          },
+          {
+            "module_id": 34184982,
+            "rotation": 0,
+            "x": -1300,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773671,
+              "serial_num": "121614034297"
+            }
+          },
+          {
+            "module_id": 34184984,
+            "rotation": 0,
+            "x": -1200,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773672,
+              "serial_num": "121614035124"
+            }
+          },
+          {
+            "module_id": 34184986,
+            "rotation": 0,
+            "x": -1100,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773673,
+              "serial_num": "121614034954"
+            }
+          },
+          {
+            "module_id": 34184988,
+            "rotation": 0,
+            "x": -1000,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773674,
+              "serial_num": "121614033203"
+            }
+          },
+          {
+            "module_id": 34184989,
+            "rotation": 0,
+            "x": -900,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773675,
+              "serial_num": "121614034952"
+            }
+          },
+          {
+            "module_id": 34184990,
+            "rotation": 0,
+            "x": -800,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773676,
+              "serial_num": "121614034868"
+            }
+          },
+          {
+            "module_id": 34184991,
+            "rotation": 0,
+            "x": -700,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773677,
+              "serial_num": "121614027943"
+            }
+          },
+          {
+            "module_id": 34184992,
+            "rotation": 0,
+            "x": -600,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773678,
+              "serial_num": "121509001697"
+            }
+          },
+          {
+            "module_id": 34184993,
+            "rotation": 0,
+            "x": -500,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773679,
+              "serial_num": "121509002025"
+            }
+          },
+          {
+            "module_id": 34184994,
+            "rotation": 0,
+            "x": -400,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773680,
+              "serial_num": "121614023281"
+            }
+          },
+          {
+            "module_id": 34184995,
+            "rotation": 0,
+            "x": -300,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773681,
+              "serial_num": "121614035225"
+            }
+          },
+          {
+            "module_id": 34184996,
+            "rotation": 0,
+            "x": -200,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773682,
+              "serial_num": "121614024404"
+            }
+          },
+          {
+            "module_id": 34184997,
+            "rotation": 0,
+            "x": -100,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773683,
+              "serial_num": "121614024942"
+            }
+          },
+          {
+            "module_id": 34184998,
+            "rotation": 0,
+            "x": 0,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773684,
+              "serial_num": "121614028365"
+            }
+          },
+          {
+            "module_id": 34184999,
+            "rotation": 0,
+            "x": 100,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773685,
+              "serial_num": "121614023278"
+            }
+          },
+          {
+            "module_id": 34185000,
+            "rotation": 0,
+            "x": 200,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773686,
+              "serial_num": "121614036274"
+            }
+          },
+          {
+            "module_id": 34185001,
+            "rotation": 0,
+            "x": 300,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773687,
+              "serial_num": "121614027967"
+            }
+          },
+          {
+            "module_id": 34185002,
+            "rotation": 0,
+            "x": 400,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773688,
+              "serial_num": "121614034299"
+            }
+          },
+          {
+            "module_id": 34185003,
+            "rotation": 0,
+            "x": 500,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773689,
+              "serial_num": "121614030728"
+            }
+          },
+          {
+            "module_id": 34185004,
+            "rotation": 0,
+            "x": 600,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773690,
+              "serial_num": "121614024407"
+            }
+          },
+          {
+            "module_id": 34185005,
+            "rotation": 0,
+            "x": 700,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773691,
+              "serial_num": "121614029363"
+            }
+          },
+          {
+            "module_id": 34185006,
+            "rotation": 0,
+            "x": 800,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773692,
+              "serial_num": "121614023267"
+            }
+          },
+          {
+            "module_id": 34185007,
+            "rotation": 0,
+            "x": 900,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773693,
+              "serial_num": "121614024544"
+            }
+          },
+          {
+            "module_id": 34185008,
+            "rotation": 0,
+            "x": 1000,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773694,
+              "serial_num": "121614029311"
+            }
+          },
+          {
+            "module_id": 34185009,
+            "rotation": 0,
+            "x": 1100,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773696,
+              "serial_num": "121614029435"
+            }
+          },
+          {
+            "module_id": 34185010,
+            "rotation": 0,
+            "x": 1200,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773698,
+              "serial_num": "121614025308"
+            }
+          },
+          {
+            "module_id": 34185011,
+            "rotation": 0,
+            "x": 1300,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773701,
+              "serial_num": "121614024441"
+            }
+          },
+          {
+            "module_id": 34185012,
+            "rotation": 0,
+            "x": 1400,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773703,
+              "serial_num": "121614024436"
+            }
+          },
+          {
+            "module_id": 34185013,
+            "rotation": 0,
+            "x": 1500,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773705,
+              "serial_num": "121614028434"
+            }
+          },
+          {
+            "module_id": 34185014,
+            "rotation": 0,
+            "x": 1600,
+            "y": -200,
+            "inverter": {
+              "inverter_id": 27773707,
+              "serial_num": "121614028421"
+            }
+          },
+          {
+            "module_id": 34185015,
+            "rotation": 0,
+            "x": -1600,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773710,
+              "serial_num": "121614034087"
+            }
+          },
+          {
+            "module_id": 34185016,
+            "rotation": 0,
+            "x": -1500,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773712,
+              "serial_num": "121614033200"
+            }
+          },
+          {
+            "module_id": 34185017,
+            "rotation": 0,
+            "x": -1400,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773714,
+              "serial_num": "121614034962"
+            }
+          },
+          {
+            "module_id": 34185018,
+            "rotation": 0,
+            "x": -1300,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773716,
+              "serial_num": "121614034969"
+            }
+          },
+          {
+            "module_id": 34185019,
+            "rotation": 0,
+            "x": -1200,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773719,
+              "serial_num": "121614032895"
+            }
+          },
+          {
+            "module_id": 34185020,
+            "rotation": 0,
+            "x": -1100,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773721,
+              "serial_num": "121614034050"
+            }
+          },
+          {
+            "module_id": 34185021,
+            "rotation": 0,
+            "x": -1000,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773723,
+              "serial_num": "121614032892"
+            }
+          },
+          {
+            "module_id": 34185022,
+            "rotation": 0,
+            "x": -900,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773726,
+              "serial_num": "121614034632"
+            }
+          },
+          {
+            "module_id": 34185023,
+            "rotation": 0,
+            "x": -800,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773728,
+              "serial_num": "121614034613"
+            }
+          },
+          {
+            "module_id": 34185024,
+            "rotation": 0,
+            "x": -700,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773730,
+              "serial_num": "121614029369"
+            }
+          },
+          {
+            "module_id": 34185025,
+            "rotation": 0,
+            "x": -600,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773731,
+              "serial_num": "121614029366"
+            }
+          },
+          {
+            "module_id": 34185026,
+            "rotation": 0,
+            "x": -500,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773732,
+              "serial_num": "121509000606"
+            }
+          },
+          {
+            "module_id": 34185027,
+            "rotation": 0,
+            "x": -400,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773733,
+              "serial_num": "121614024426"
+            }
+          },
+          {
+            "module_id": 34185028,
+            "rotation": 0,
+            "x": -300,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773734,
+              "serial_num": "121614024453"
+            }
+          },
+          {
+            "module_id": 34185029,
+            "rotation": 0,
+            "x": -200,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773735,
+              "serial_num": "121508021564"
+            }
+          },
+          {
+            "module_id": 34185030,
+            "rotation": 0,
+            "x": -100,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773736,
+              "serial_num": "121508019805"
+            }
+          },
+          {
+            "module_id": 34185031,
+            "rotation": 0,
+            "x": 0,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773737,
+              "serial_num": "121508021223"
+            }
+          },
+          {
+            "module_id": 34185032,
+            "rotation": 0,
+            "x": 100,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773738,
+              "serial_num": "121509000366"
+            }
+          },
+          {
+            "module_id": 34185033,
+            "rotation": 0,
+            "x": 200,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773739,
+              "serial_num": "121509002504"
+            }
+          },
+          {
+            "module_id": 34185034,
+            "rotation": 0,
+            "x": 300,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773740,
+              "serial_num": "121508016900"
+            }
+          },
+          {
+            "module_id": 34185035,
+            "rotation": 0,
+            "x": 400,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773741,
+              "serial_num": "121508021144"
+            }
+          },
+          {
+            "module_id": 34185036,
+            "rotation": 0,
+            "x": 500,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773742,
+              "serial_num": "121509001772"
+            }
+          },
+          {
+            "module_id": 34185037,
+            "rotation": 0,
+            "x": 600,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773743,
+              "serial_num": "121508020791"
+            }
+          },
+          {
+            "module_id": 34185038,
+            "rotation": 0,
+            "x": 700,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773744,
+              "serial_num": "121614028415"
+            }
+          },
+          {
+            "module_id": 34185039,
+            "rotation": 0,
+            "x": 800,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773745,
+              "serial_num": "121614029377"
+            }
+          },
+          {
+            "module_id": 34185040,
+            "rotation": 0,
+            "x": 900,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773746,
+              "serial_num": "121614029368"
+            }
+          },
+          {
+            "module_id": 34185041,
+            "rotation": 0,
+            "x": 1000,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773747,
+              "serial_num": "121614029372"
+            }
+          },
+          {
+            "module_id": 34185042,
+            "rotation": 0,
+            "x": 1100,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773748,
+              "serial_num": "121614029388"
+            }
+          },
+          {
+            "module_id": 34185043,
+            "rotation": 0,
+            "x": 1200,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773749,
+              "serial_num": "121614028428"
+            }
+          },
+          {
+            "module_id": 34185044,
+            "rotation": 0,
+            "x": 1300,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773750,
+              "serial_num": "121614024402"
+            }
+          },
+          {
+            "module_id": 34185045,
+            "rotation": 0,
+            "x": 1400,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773751,
+              "serial_num": "121614023273"
+            }
+          },
+          {
+            "module_id": 34185046,
+            "rotation": 0,
+            "x": 1500,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773752,
+              "serial_num": "121614024432"
+            }
+          },
+          {
+            "module_id": 34185047,
+            "rotation": 0,
+            "x": 1600,
+            "y": 0,
+            "inverter": {
+              "inverter_id": 27773753,
+              "serial_num": "121614028429"
+            }
+          },
+          {
+            "module_id": 34185048,
+            "rotation": 0,
+            "x": -1600,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773754,
+              "serial_num": "121614034246"
+            }
+          },
+          {
+            "module_id": 34185049,
+            "rotation": 0,
+            "x": -1500,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773755,
+              "serial_num": "121614033955"
+            }
+          },
+          {
+            "module_id": 34185050,
+            "rotation": 0,
+            "x": -1400,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773756,
+              "serial_num": "121614033242"
+            }
+          },
+          {
+            "module_id": 34185051,
+            "rotation": 0,
+            "x": -1300,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773757,
+              "serial_num": "121614030240"
+            }
+          },
+          {
+            "module_id": 34185052,
+            "rotation": 0,
+            "x": -1200,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773758,
+              "serial_num": "121614032896"
+            }
+          },
+          {
+            "module_id": 34185053,
+            "rotation": 0,
+            "x": -1100,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773759,
+              "serial_num": "121614028110"
+            }
+          },
+          {
+            "module_id": 34185054,
+            "rotation": 0,
+            "x": -1000,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773760,
+              "serial_num": "121614030241"
+            }
+          },
+          {
+            "module_id": 34185055,
+            "rotation": 0,
+            "x": -900,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773761,
+              "serial_num": "121614028093"
+            }
+          },
+          {
+            "module_id": 34185056,
+            "rotation": 0,
+            "x": -800,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773762,
+              "serial_num": "121614032899"
+            }
+          },
+          {
+            "module_id": 34185057,
+            "rotation": 0,
+            "x": -700,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773763,
+              "serial_num": "121614024435"
+            }
+          },
+          {
+            "module_id": 34185058,
+            "rotation": 0,
+            "x": -600,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773764,
+              "serial_num": "121614023733"
+            }
+          },
+          {
+            "module_id": 34185059,
+            "rotation": 0,
+            "x": -500,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773765,
+              "serial_num": "121614029386"
+            }
+          },
+          {
+            "module_id": 34185060,
+            "rotation": 0,
+            "x": -400,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773766,
+              "serial_num": "121614029313"
+            }
+          },
+          {
+            "module_id": 34185061,
+            "rotation": 0,
+            "x": -300,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773767,
+              "serial_num": "121614023776"
+            }
+          },
+          {
+            "module_id": 34185062,
+            "rotation": 0,
+            "x": -200,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773768,
+              "serial_num": "121614029362"
+            }
+          },
+          {
+            "module_id": 34185063,
+            "rotation": 0,
+            "x": -100,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773769,
+              "serial_num": "121614029409"
+            }
+          },
+          {
+            "module_id": 34185064,
+            "rotation": 0,
+            "x": 0,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773770,
+              "serial_num": "121614023840"
+            }
+          },
+          {
+            "module_id": 34185065,
+            "rotation": 0,
+            "x": 100,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773771,
+              "serial_num": "121614029457"
+            }
+          },
+          {
+            "module_id": 34185066,
+            "rotation": 0,
+            "x": 200,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773772,
+              "serial_num": "121614023694"
+            }
+          },
+          {
+            "module_id": 34185067,
+            "rotation": 0,
+            "x": 300,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773773,
+              "serial_num": "121614023277"
+            }
+          },
+          {
+            "module_id": 34185068,
+            "rotation": 0,
+            "x": 400,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773774,
+              "serial_num": "121614024122"
+            }
+          },
+          {
+            "module_id": 34185069,
+            "rotation": 0,
+            "x": 500,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773775,
+              "serial_num": "121614023693"
+            }
+          },
+          {
+            "module_id": 34185070,
+            "rotation": 0,
+            "x": 600,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773776,
+              "serial_num": "121614023261"
+            }
+          },
+          {
+            "module_id": 34185071,
+            "rotation": 0,
+            "x": 700,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773777,
+              "serial_num": "121614024395"
+            }
+          },
+          {
+            "module_id": 34185072,
+            "rotation": 0,
+            "x": 800,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773778,
+              "serial_num": "121614023234"
+            }
+          },
+          {
+            "module_id": 34185073,
+            "rotation": 0,
+            "x": 900,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773779,
+              "serial_num": "121614023248"
+            }
+          },
+          {
+            "module_id": 34185074,
+            "rotation": 0,
+            "x": 1000,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773780,
+              "serial_num": "121614024394"
+            }
+          },
+          {
+            "module_id": 34185075,
+            "rotation": 0,
+            "x": 1100,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773781,
+              "serial_num": "121614023235"
+            }
+          },
+          {
+            "module_id": 34185076,
+            "rotation": 0,
+            "x": 1200,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773782,
+              "serial_num": "121614023240"
+            }
+          },
+          {
+            "module_id": 34185077,
+            "rotation": 0,
+            "x": 1300,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773783,
+              "serial_num": "121614024405"
+            }
+          },
+          {
+            "module_id": 34185078,
+            "rotation": 0,
+            "x": 1400,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773784,
+              "serial_num": "121614023280"
+            }
+          },
+          {
+            "module_id": 34185079,
+            "rotation": 0,
+            "x": 1500,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773785,
+              "serial_num": "121614024149"
+            }
+          },
+          {
+            "module_id": 34185080,
+            "rotation": 0,
+            "x": 1600,
+            "y": 200,
+            "inverter": {
+              "inverter_id": 27773786,
+              "serial_num": "121614028423"
+            }
+          }
+        ],
+        "dimensions": {
+          "x_min": -134,
+          "x_max": 3756,
+          "y_min": -1711,
+          "y_max": 2138
+        }
+      }
+    ],
+    "background": {
+      "url": "//s3.amazonaws.com/enlighten-files/bgs/77949/original/bg1556030124.jpg",
+      "opacity": 1,
+      "rotation": 39,
+      "scale": 24.7,
+      "x": 1623,
+      "y": -219,
+      "width": 1024,
+      "height": 768
+    },
+    "haiku": "Put upon the roof / I am waiting for the sun / All I see is clouds"
+  }

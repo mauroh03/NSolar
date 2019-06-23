@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import pa.nsolar.backend.module.services.dto.InverterDataRequest;
 import pa.nsolar.backend.module.services.dto.InverterDataResponse;
+import pa.nsolar.backend.module.services.dto.ModuleArrayRequest;
+import pa.nsolar.backend.module.services.dto.ModuleArrayResponse;
 import pa.nsolar.backend.module.services.interfaces.IModuleInfoNSolar;
 
 @RefreshScope
@@ -32,5 +34,13 @@ public class ModuleInfoController {
 			@RequestBody InverterDataRequest getInverterData) {
 		LOGGER.info("[NSOLAR - TRACE] - ENTRY SERVICE getInverterData");
 		return new ResponseEntity<>(moduleStuff.getInverterData(getInverterData), HttpStatus.OK);
+	}
+	
+	@CrossOrigin(origins = "*")
+	@PostMapping("/getModuoleData")
+	public ResponseEntity<ModuleArrayResponse> getModuleDataMethodPost(
+			@RequestBody ModuleArrayRequest moduleArrayRequest) {
+		LOGGER.info("[NSOLAR - TRACE] - ENTRY SERVICE getModuleData");
+		return new ResponseEntity<>(moduleStuff.getModuleData(moduleArrayRequest), HttpStatus.OK);
 	}
 }
