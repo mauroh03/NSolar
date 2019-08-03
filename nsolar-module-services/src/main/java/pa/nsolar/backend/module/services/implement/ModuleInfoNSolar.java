@@ -4,9 +4,11 @@ import java.text.DecimalFormat;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.NoSuchElementException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -68,13 +70,13 @@ public class ModuleInfoNSolar implements IModuleInfoNSolar {
 	public ModuleArrayResponse getModuleData(ModuleArrayRequest request) {
 		ModuleArrayResponse moduleArrayResponse = new ModuleArrayResponse();
 		ObjectMapper mapper = new ObjectMapper();
-		// ObjectMapper productionMapper = new ObjectMapper();
 		ENModuleArrayResponse moduleArrayObject = new ENModuleArrayResponse();
 		InverterDataObject productionObject = new InverterDataObject();
 		try {
-			moduleArrayObject = mapper.readValue(request.getModuleData(), ENModuleArrayResponse.class);
 			productionObject = mapper.readValue(request.getModuleProduction(), InverterDataObject.class);
-
+			moduleArrayObject = mapper.readValue(request.getModuleData(), ENModuleArrayResponse.class);
+			List<ArrayObject> positiveArrays = this.buildPositiveArrays(moduleArrayObject.getArrays());
+			moduleArrayObject.setArrays(positiveArrays);
 			moduleArrayResponse.setBackground(moduleArrayObject.getBackground());
 			moduleArrayResponse.setSystemArrays(this.buildCustomObject(moduleArrayObject, productionObject));
 			moduleArrayResponse.setRotation(moduleArrayObject.getRotation());
@@ -124,5 +126,28 @@ public class ModuleInfoNSolar implements IModuleInfoNSolar {
 		}
 
 		return production;
+	}
+	
+	private List<ArrayObject> buildPositiveArrays(List<ArrayObject> arrays) {
+		List<ArrayObject> positiveArrays = new ArrayList<>();
+		for (ArrayObject arrayObject : arrays) {
+			ArrayObject positiveArrayObject = arrayObject;
+			List<ModulesObject> positivesModules = new ArrayList<>();
+			Integer minX = Math.abs(arrayObject.getModules().stream().min(Comparator.comparing(ModulesObject::getX))
+					.orElseThrow(NoSuchElementException::new).getX());
+			Integer minY =  Math.abs(arrayObject.getModules().stream().min(Comparator.comparing(ModulesObject::getY))
+					.orElseThrow(NoSuchElementException::new).getY());
+			for (ModulesObject modulesObject : arrayObject.getModules()) {
+				ModulesObject positiveModule = modulesObject;
+				positiveModule.setX(positiveModule.getX()+minX);
+				positiveModule.setY(positiveModule.getY()+minY);
+				
+				positivesModules.add(positiveModule);
+			}
+			positiveArrayObject.setModules(positivesModules);
+			positiveArrays.add(positiveArrayObject);
+		}
+		
+		return positiveArrays;
 	}
 }
