@@ -20,6 +20,7 @@ import pa.nsolar.backend.module.services.dto.ArrayObject;
 import pa.nsolar.backend.module.services.dto.CustomArrayObject;
 import pa.nsolar.backend.module.services.dto.CustomModuleObject;
 import pa.nsolar.backend.module.services.dto.ENModuleArrayResponse;
+import pa.nsolar.backend.module.services.dto.EnumModuleColor;
 import pa.nsolar.backend.module.services.dto.InverterDataObject;
 import pa.nsolar.backend.module.services.dto.InverterDataRequest;
 import pa.nsolar.backend.module.services.dto.InverterDataResponse;
@@ -90,22 +91,23 @@ public class ModuleInfoNSolar implements IModuleInfoNSolar {
 
 	public List<CustomArrayObject> buildCustomObject(ENModuleArrayResponse modulesData,
 			InverterDataObject modulesProduction) throws Exception {
-
 		List<CustomArrayObject> customArrays = new ArrayList<>();
+		DecimalFormat df = new DecimalFormat("#0.00");
+		Double maxProduction = Double.valueOf(df.format(Collections.max(modulesProduction.getProduction().entrySet(), Map.Entry.comparingByValue()).getValue() / 1000));
 		for (ArrayObject arrayObject : modulesData.getArrays()) {
 			CustomArrayObject customArrayObject = new CustomArrayObject();
 			customArrayObject.setAzimuth(arrayObject.getAzimuth());
 			customArrayObject.setLabel(arrayObject.getLabel());
-			customArrayObject.setX(arrayObject.getX());
-			customArrayObject.setY(arrayObject.getY());
 			List<CustomModuleObject> modules = new ArrayList<>();
+			customArrayObject.setxMax(arrayObject.getModules().stream().max(Comparator.comparing(ModulesObject::getX)).orElseThrow(NoSuchElementException::new).getX());
+			customArrayObject.setyMax(arrayObject.getModules().stream().max(Comparator.comparing(ModulesObject::getY)).orElseThrow(NoSuchElementException::new).getY());
 			for (ModulesObject module : arrayObject.getModules()) {
 				CustomModuleObject customModuleObject = new CustomModuleObject();
 				customModuleObject.setInverterId(module.getInverter().getInverter_id());
 				customModuleObject.setX(module.getX());
 				customModuleObject.setY(module.getY());
-				customModuleObject.setGeneratedPower(
-						this.getModuleProduction(modulesProduction, module.getInverter().getInverter_id()));
+				customModuleObject.setGeneratedPower(this.getModuleProduction(modulesProduction, module.getInverter().getInverter_id()));
+				customModuleObject.setModuleColor(this.getModuleColor(customModuleObject.getGeneratedPower(), maxProduction));
 				modules.add(customModuleObject);
 			}
 			customArrayObject.setModules(modules);
@@ -113,6 +115,25 @@ public class ModuleInfoNSolar implements IModuleInfoNSolar {
 		}
 
 		return customArrays;
+	}
+	
+	private String getModuleColor(Double moduleProduction, Double maxProduction) {
+		DecimalFormat df = new DecimalFormat("#0");
+		Integer modulePercentage = Integer.valueOf(df.format((moduleProduction / maxProduction) * 100));
+		
+		if(modulePercentage >= EnumModuleColor.C1.getMinPercentage()) {
+			return EnumModuleColor.C1.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C2.getMinPercentage() && modulePercentage <= EnumModuleColor.C2.getMaxPercentage()) {
+			return EnumModuleColor.C2.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C3.getMinPercentage() && modulePercentage <= EnumModuleColor.C3.getMaxPercentage()) {
+			return EnumModuleColor.C3.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C4.getMinPercentage() && modulePercentage <= EnumModuleColor.C4.getMaxPercentage()) {
+			return EnumModuleColor.C4.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C5.getMinPercentage() && modulePercentage <= EnumModuleColor.C5.getMaxPercentage()) {
+			return EnumModuleColor.C5.getColor();
+		} else {
+			return EnumModuleColor.C6.getColor();
+		}
 	}
 
 	public Double getModuleProduction(InverterDataObject modulesProduction, Integer inverterId) {
@@ -133,10 +154,8 @@ public class ModuleInfoNSolar implements IModuleInfoNSolar {
 		for (ArrayObject arrayObject : arrays) {
 			ArrayObject positiveArrayObject = arrayObject;
 			List<ModulesObject> positivesModules = new ArrayList<>();
-			Integer minX = Math.abs(arrayObject.getModules().stream().min(Comparator.comparing(ModulesObject::getX))
-					.orElseThrow(NoSuchElementException::new).getX());
-			Integer minY =  Math.abs(arrayObject.getModules().stream().min(Comparator.comparing(ModulesObject::getY))
-					.orElseThrow(NoSuchElementException::new).getY());
+			Integer minX = Math.abs(arrayObject.getModules().stream().min(Comparator.comparing(ModulesObject::getX)).orElseThrow(NoSuchElementException::new).getX());
+			Integer minY =  Math.abs(arrayObject.getModules().stream().min(Comparator.comparing(ModulesObject::getY)).orElseThrow(NoSuchElementException::new).getY());
 			for (ModulesObject modulesObject : arrayObject.getModules()) {
 				ModulesObject positiveModule = modulesObject;
 				positiveModule.setX(positiveModule.getX()+minX);

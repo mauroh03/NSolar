@@ -5,8 +5,8 @@ import java.util.List;
 public class CustomArrayObject {
 
 	private String label;
-	private Integer x;
-	private Integer y;
+	private Integer xMax;
+	private Integer yMax;
 	private Integer azimuth;
 	private List<CustomModuleObject> modules;
 
@@ -14,36 +14,36 @@ public class CustomArrayObject {
 		return label;
 	}
 
-	public void setLabel(String label) {
-		this.label = label;
+	public Integer getxMax() {
+		return xMax;
 	}
 
-	public Integer getX() {
-		return x;
-	}
-
-	public void setX(Integer x) {
-		this.x = x;
-	}
-
-	public Integer getY() {
-		return y;
-	}
-
-	public void setY(Integer y) {
-		this.y = y;
+	public Integer getyMax() {
+		return yMax;
 	}
 
 	public Integer getAzimuth() {
 		return azimuth;
 	}
 
-	public void setAzimuth(Integer azimuth) {
-		this.azimuth = azimuth;
-	}
-
 	public List<CustomModuleObject> getModules() {
 		return modules;
+	}
+
+	public void setLabel(String label) {
+		this.label = label;
+	}
+
+	public void setxMax(Integer xMax) {
+		this.xMax = xMax;
+	}
+
+	public void setyMax(Integer yMax) {
+		this.yMax = yMax;
+	}
+
+	public void setAzimuth(Integer azimuth) {
+		this.azimuth = azimuth;
 	}
 
 	public void setModules(List<CustomModuleObject> modules) {
@@ -52,7 +52,7 @@ public class CustomArrayObject {
 
 	@Override
 	public String toString() {
-		return "CustomArrayObject [label=" + label + ", x=" + x + ", y=" + y + ", azimuth=" + azimuth + ", modules="
-				+ modules + "]";
+		return "CustomArrayObject [label=" + label + ", xMax=" + xMax + ", yMax=" + yMax + ", azimuth=" + azimuth
+				+ ", modules=" + modules + "]";
 	}
 }
