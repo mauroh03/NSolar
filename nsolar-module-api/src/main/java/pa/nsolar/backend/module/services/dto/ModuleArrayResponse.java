@@ -7,6 +7,7 @@ public class ModuleArrayResponse {
 	private List<CustomArrayObject> systemArrays;
 	private BackgroundObjeect background;
 	private Integer rotation;
+	private String generalView;
 
 	public List<CustomArrayObject> getSystemArrays() {
 		return systemArrays;
@@ -32,9 +33,17 @@ public class ModuleArrayResponse {
 		this.rotation = rotation;
 	}
 
+	public String getGeneralView() {
+		return generalView;
+	}
+
+	public void setGeneralView(String generalView) {
+		this.generalView = generalView;
+	}
+
 	@Override
 	public String toString() {
 		return "ModuleArrayResponse [systemArrays=" + systemArrays + ", background=" + background + ", rotation="
-				+ rotation + "]";
+				+ rotation + ", generalView=" + generalView + "]";
 	}
 }

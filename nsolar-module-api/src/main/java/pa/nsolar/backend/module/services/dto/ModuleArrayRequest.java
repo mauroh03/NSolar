@@ -4,6 +4,7 @@ public class ModuleArrayRequest {
 
 	private String moduleData;
 	private String moduleProduction;
+	private String clientId;
 
 	public String getModuleData() {
 		return moduleData;
@@ -21,8 +22,17 @@ public class ModuleArrayRequest {
 		this.moduleProduction = moduleProduction;
 	}
 
+	public String getClientId() {
+		return clientId;
+	}
+
+	public void setClientId(String clientId) {
+		this.clientId = clientId;
+	}
+
 	@Override
 	public String toString() {
-		return "ModuleArrayRequest [moduleData=" + moduleData + ", moduleProduction=" + moduleProduction + "]";
+		return "ModuleArrayRequest [moduleData=" + moduleData + ", moduleProduction=" + moduleProduction + ", clientId="
+				+ clientId + "]";
 	}
 }

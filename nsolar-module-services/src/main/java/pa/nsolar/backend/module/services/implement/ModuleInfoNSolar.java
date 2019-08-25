@@ -1,5 +1,7 @@
 package pa.nsolar.backend.module.services.implement;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.text.DecimalFormat;
 import java.util.AbstractMap;
 import java.util.ArrayList;
@@ -10,8 +12,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.NoSuchElementException;
 
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -33,6 +37,12 @@ import pa.nsolar.backend.module.services.interfaces.IModuleInfoNSolar;
 public class ModuleInfoNSolar implements IModuleInfoNSolar {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ModuleInfoNSolar.class);
+	
+	@Value("${nsolar.module.image.extension}")
+	private String imageExtension;
+	
+	@Value("${nsolar.module.image.filePath}")
+	private String imageBasePath;
 
 	@Override
 	public InverterDataResponse getInverterData(InverterDataRequest request) {
@@ -81,6 +91,7 @@ public class ModuleInfoNSolar implements IModuleInfoNSolar {
 			moduleArrayResponse.setBackground(moduleArrayObject.getBackground());
 			moduleArrayResponse.setSystemArrays(this.buildCustomObject(moduleArrayObject, productionObject));
 			moduleArrayResponse.setRotation(moduleArrayObject.getRotation());
+			moduleArrayResponse.setGeneralView(this.getImageBase64(request.getClientId()));
 		} catch (Exception e) {
 			LOGGER.error("Error: {}", e.getMessage());
 			e.printStackTrace();
@@ -131,8 +142,26 @@ public class ModuleInfoNSolar implements IModuleInfoNSolar {
 			return EnumModuleColor.C4.getColor();
 		} else if (modulePercentage >= EnumModuleColor.C5.getMinPercentage() && modulePercentage <= EnumModuleColor.C5.getMaxPercentage()) {
 			return EnumModuleColor.C5.getColor();
-		} else {
+		} else if (modulePercentage >= EnumModuleColor.C6.getMinPercentage() && modulePercentage <= EnumModuleColor.C6.getMaxPercentage()) {
 			return EnumModuleColor.C6.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C7.getMinPercentage() && modulePercentage <= EnumModuleColor.C7.getMaxPercentage()) {
+			return EnumModuleColor.C7.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C8.getMinPercentage() && modulePercentage <= EnumModuleColor.C8.getMaxPercentage()) {
+			return EnumModuleColor.C8.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C9.getMinPercentage() && modulePercentage <= EnumModuleColor.C9.getMaxPercentage()) {
+			return EnumModuleColor.C9.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C10.getMinPercentage() && modulePercentage <= EnumModuleColor.C10.getMaxPercentage()) {
+			return EnumModuleColor.C10.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C11.getMinPercentage() && modulePercentage <= EnumModuleColor.C11.getMaxPercentage()) {
+			return EnumModuleColor.C11.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C12.getMinPercentage() && modulePercentage <= EnumModuleColor.C12.getMaxPercentage()) {
+			return EnumModuleColor.C12.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C13.getMinPercentage() && modulePercentage <= EnumModuleColor.C13.getMaxPercentage()) {
+			return EnumModuleColor.C13.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C14.getMinPercentage() && modulePercentage <= EnumModuleColor.C14.getMaxPercentage()) {
+			return EnumModuleColor.C14.getColor();
+		} else {
+			return EnumModuleColor.C15.getColor();
 		}
 	}
 
@@ -168,5 +197,22 @@ public class ModuleInfoNSolar implements IModuleInfoNSolar {
 		}
 		
 		return positiveArrays;
+	}
+	
+	@SuppressWarnings("resource")
+	private String getImageBase64(String clientId) {
+		String encodedfile = null;
+		try {
+			File imageFile =  new File(imageBasePath + clientId + imageExtension);
+			FileInputStream fileInputStreamReader = new FileInputStream(imageFile);
+            byte[] bytes = new byte[(int)imageFile.length()];
+            fileInputStreamReader.read(bytes);
+            encodedfile = new String(Base64.encodeBase64(bytes), "UTF-8");
+		} catch (Exception e) {
+			LOGGER.error("Error: {}", e.getMessage());
+			e.printStackTrace();
+		}
+		
+		return encodedfile;
 	}
 }
