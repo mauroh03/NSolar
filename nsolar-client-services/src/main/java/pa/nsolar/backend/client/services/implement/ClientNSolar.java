@@ -95,7 +95,7 @@ public class ClientNSolar implements IClientNSolar {
 		try {
 			excelClientList = this.getExcelClientList();
 			for (ExcelObject excelObject : excelClientList) {
-				if (excelObject.getUser_id().equals(clientId)) {
+				if (null != excelObject.getUser_id() && excelObject.getUser_id().equals(clientId)) {
 					LOGGER.info("clientExcelObject: {}", excelObject);
 					return excelObject;
 				}
@@ -110,63 +110,68 @@ public class ClientNSolar implements IClientNSolar {
 
 	private List<ExcelObject> getExcelClientList() {
 		DecimalFormat df = new DecimalFormat("#.00");
+		DecimalFormat integerF = new DecimalFormat("#");
 		List<ExcelObject> excelClientList = new ArrayList<>();
 		try {
 			FileInputStream excelFile = new FileInputStream(new File(excelFilePath));
 			Workbook workbook = new XSSFWorkbook(excelFile);
 			Sheet datatypeSheet = workbook.getSheetAt(0);
 			Iterator<Row> iterator = datatypeSheet.iterator();
-
+			int count = 0;
 			while (iterator.hasNext()) {
 				Row currentRow = iterator.next();
 				Iterator<Cell> cellIterator = currentRow.iterator();
-				while (cellIterator.hasNext()) {
-					Cell currentCell = cellIterator.next();
+				if (count != 0) {
 					ExcelObject userObject = new ExcelObject();
-					int index = currentCell.getColumnIndex();
-					switch (index) {
-					case 0:
-						userObject.setCliente(currentCell.getStringCellValue());
-						break;
-					case 1:
-						userObject.setUser_id(Integer.valueOf(df.format(currentCell.getNumericCellValue())));
-						break;
-					case 2:
-						userObject.setSistema_kW(df.format(currentCell.getNumericCellValue()));
-						break;
-					case 3:
-						userObject.setPaneles(Integer.valueOf(df.format(currentCell.getNumericCellValue())));
-						break;
-					case 4:
-						userObject.setWatts_Panel(Integer.valueOf(df.format(currentCell.getNumericCellValue())));
-						break;
-					case 5:
-						userObject.setFecha_Operacion_Enphase(currentCell.getStringCellValue());
-						break;
-					case 6:
-						userObject.setFecha_Medidor_Bidireccional(currentCell.getStringCellValue());
-						break;
-					case 7:
-						userObject.setPanel(currentCell.getStringCellValue());
-						break;
-					case 8:
-						userObject.setModelo_Panel(currentCell.getStringCellValue());
-						break;
-					case 9:
-						userObject.setMicroinversor(currentCell.getStringCellValue());
-						break;
-					default:
-						LOGGER.info("INDEX OUT OF BOUNDS");
+					while (cellIterator.hasNext()) {
+						Cell currentCell = cellIterator.next();
+						int index = currentCell.getColumnIndex();
+						if (currentCell != null) {
+							switch (index) {
+							case 0:
+								userObject.setCliente(currentCell.getStringCellValue());
+								break;
+							case 1:
+								userObject.setUser_id(Integer.valueOf(integerF.format(currentCell.getNumericCellValue())));
+								break;
+							case 2:
+								userObject.setSistema_kW(df.format(currentCell.getNumericCellValue()));
+								break;
+							case 3:
+								userObject.setPaneles(Integer.valueOf(integerF.format(currentCell.getNumericCellValue())));
+								break;
+							case 4:
+								userObject.setWatts_Panel(Integer.valueOf(integerF.format(currentCell.getNumericCellValue())));
+								break;
+							case 5:
+								userObject.setFecha_Operacion_Enphase(currentCell.getStringCellValue());
+								break;
+							case 6:
+								userObject.setFecha_Medidor_Bidireccional(currentCell.getStringCellValue());
+								break;
+							case 7:
+								userObject.setPanel(currentCell.getStringCellValue());
+								break;
+							case 8:
+								userObject.setModelo_Panel(currentCell.getStringCellValue());
+								break;
+							case 9:
+								userObject.setMicroinversor(currentCell.getStringCellValue());
+								break;
+							default:
+								LOGGER.info("INDEX OUT OF BOUNDS");
+							}
+						}
+						excelClientList.add(userObject);
 					}
-					LOGGER.info("{}\n", userObject);
-					excelClientList.add(userObject);
 				}
+				count++;
 			}
 			workbook.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return excelClientList;
 	}
 
