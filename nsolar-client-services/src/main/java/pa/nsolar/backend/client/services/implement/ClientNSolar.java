@@ -1,6 +1,7 @@
 package pa.nsolar.backend.client.services.implement;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -9,13 +10,14 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import java.util.Iterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import pa.nsolar.backend.client.api.dto.ClientSummaryRequest;
 import pa.nsolar.backend.client.api.dto.ClientSummaryResponse;
@@ -35,12 +37,15 @@ import pa.nsolar.backend.client.services.interfaces.IClientNSolar;
 public class ClientNSolar implements IClientNSolar {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ClientNSolar.class);
-	
+
 	@Autowired
 	IApiCallOperation apiCallOperation;
 
 	@Value("${nsolar.general.filePath}")
 	private String filePath;
+
+	@Value("${nsolar.excel.filePath}")
+	private String excelFilePath;
 
 	@Override
 	public EnergyLifeTimeResponse nSolarClientList() {
@@ -59,6 +64,7 @@ public class ClientNSolar implements IClientNSolar {
 
 	@Override
 	public EnergyLifeTimeDatedResponse nSolarLifeTimeEnergy(EnergyLifeTimeDatedRequest energyLifeTimeDatedRequest) {
+
 		DecimalFormat df = new DecimalFormat("#.00");
 		EnergyLifeTimeDatedObject energyLifeTimeDatedObject = new EnergyLifeTimeDatedObject();
 		ExcelObject clientExcelObject = this.getClientJSONObject(energyLifeTimeDatedRequest.getClientId());
@@ -68,7 +74,8 @@ public class ClientNSolar implements IClientNSolar {
 		energyLifeTimeDatedObject.setStartDate(dateObject.getStartDate());
 		energyLifeTimeDatedObject.setEndDate(dateObject.getEndDate());
 		EnergyLifeTimeDatedResponse response = apiCallOperation.nSolarEnergyLifeTime(energyLifeTimeDatedObject);
-		Double totalGneration = Double.valueOf(df.format(response.getProduction().stream().mapToInt(Integer::intValue).sum() / 1000.0));
+		Double totalGneration = Double
+				.valueOf(df.format(response.getProduction().stream().mapToInt(Integer::intValue).sum() / 1000.0));
 		response.setMayorGeneration(this.getGenerationDate(response, "+"));
 		response.setMinorGeneration(this.getGenerationDate(response, "-"));
 		response.setTotalGeneracion(totalGneration);
@@ -77,21 +84,18 @@ public class ClientNSolar implements IClientNSolar {
 		response.setHouses(this.getHouseCount(response));
 		response.setTrees(this.getTreesCount(response));
 		response.setClientExcelObject(clientExcelObject);
-		response.setMediaGeneration(Double.valueOf(df.format( totalGneration / response.getProduction().size())));
+		response.setMediaGeneration(Double.valueOf(df.format(totalGneration / response.getProduction().size())));
 
 		return response;
 	}
 
 	private ExcelObject getClientJSONObject(Integer clientId) {
-		ObjectMapper mapper = new ObjectMapper();
 		List<ExcelObject> excelClientList = new ArrayList<>();
 		ExcelObject userObject = new ExcelObject();
 		try {
-			excelClientList = mapper.readValue(new File(filePath),
-					mapper.getTypeFactory().constructCollectionType(List.class, ExcelObject.class));
-
+			excelClientList = this.getExcelClientList();
 			for (ExcelObject excelObject : excelClientList) {
-				if (excelObject.getUser_id().equals(clientId)) {
+				if (null != excelObject.getUser_id() && excelObject.getUser_id().equals(clientId)) {
 					LOGGER.info("clientExcelObject: {}", excelObject);
 					return excelObject;
 				}
@@ -102,6 +106,73 @@ public class ClientNSolar implements IClientNSolar {
 		LOGGER.error("Client not found on excel file");
 
 		return userObject;
+	}
+
+	private List<ExcelObject> getExcelClientList() {
+		DecimalFormat df = new DecimalFormat("#.00");
+		DecimalFormat integerF = new DecimalFormat("#");
+		List<ExcelObject> excelClientList = new ArrayList<>();
+		try {
+			FileInputStream excelFile = new FileInputStream(new File(excelFilePath));
+			Workbook workbook = new XSSFWorkbook(excelFile);
+			Sheet datatypeSheet = workbook.getSheetAt(0);
+			Iterator<Row> iterator = datatypeSheet.iterator();
+			int count = 0;
+			while (iterator.hasNext()) {
+				Row currentRow = iterator.next();
+				Iterator<Cell> cellIterator = currentRow.iterator();
+				if (count != 0) {
+					ExcelObject userObject = new ExcelObject();
+					while (cellIterator.hasNext()) {
+						Cell currentCell = cellIterator.next();
+						int index = currentCell.getColumnIndex();
+						if (currentCell != null) {
+							switch (index) {
+							case 0:
+								userObject.setCliente(currentCell.getStringCellValue());
+								break;
+							case 1:
+								userObject.setUser_id(Integer.valueOf(integerF.format(currentCell.getNumericCellValue())));
+								break;
+							case 2:
+								userObject.setSistema_kW(df.format(currentCell.getNumericCellValue()));
+								break;
+							case 3:
+								userObject.setPaneles(Integer.valueOf(integerF.format(currentCell.getNumericCellValue())));
+								break;
+							case 4:
+								userObject.setWatts_Panel(Integer.valueOf(integerF.format(currentCell.getNumericCellValue())));
+								break;
+							case 5:
+								userObject.setFecha_Operacion_Enphase(currentCell.getStringCellValue());
+								break;
+							case 6:
+								userObject.setFecha_Medidor_Bidireccional(currentCell.getStringCellValue());
+								break;
+							case 7:
+								userObject.setPanel(currentCell.getStringCellValue());
+								break;
+							case 8:
+								userObject.setModelo_Panel(currentCell.getStringCellValue());
+								break;
+							case 9:
+								userObject.setMicroinversor(currentCell.getStringCellValue());
+								break;
+							default:
+								LOGGER.info("INDEX OUT OF BOUNDS");
+							}
+						}
+						excelClientList.add(userObject);
+					}
+				}
+				count++;
+			}
+			workbook.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return excelClientList;
 	}
 
 	private DateObject getDates(String commingDate, Integer moreLess) {
@@ -165,8 +236,7 @@ public class ClientNSolar implements IClientNSolar {
 				response.getProduction().stream().mapToInt(Integer::intValue).sum(),
 				Double.valueOf(df.format((7.07 * Math.pow(10, -4))
 						* response.getProduction().stream().mapToInt(Integer::intValue).sum())));
-		return Double.valueOf(df.format(
-				(7.07 * Math.pow(10, -4)) * response.getTotalGeneracion()));
+		return Double.valueOf(df.format((7.07 * Math.pow(10, -4)) * response.getTotalGeneracion()));
 	}
 
 	private GenerationMeasurement getComparisson(EnergyLifeTimeDatedRequest request,
@@ -186,10 +256,10 @@ public class ClientNSolar implements IClientNSolar {
 
 		Double up = Double.valueOf(actualProduction - previousProduction);
 		Double down = Double.valueOf(previousProduction);
-		response.setValue(df.format((up/down)*100).replaceAll("-", ""));
+		response.setValue(df.format((up / down) * 100).replaceAll("-", ""));
 
 		LOGGER.info("Comparisson: {} percentage: |(({} - {}) / {})*100| = {}", response.getIndicator(),
-				actualProduction, previousProduction, previousProduction, (up/down)*100);
+				actualProduction, previousProduction, previousProduction, (up / down) * 100);
 
 		return response;
 	}
