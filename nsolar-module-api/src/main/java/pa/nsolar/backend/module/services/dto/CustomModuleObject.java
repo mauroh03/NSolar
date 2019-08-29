@@ -7,6 +7,7 @@ public class CustomModuleObject {
 	private Integer y;
 	private Double generatedPower;
 	private String moduleColor;
+	private Integer panelRotation;
 
 	public Integer getInverterId() {
 		return inverterId;
@@ -26,6 +27,10 @@ public class CustomModuleObject {
 
 	public String getModuleColor() {
 		return moduleColor;
+	}
+
+	public Integer getPanelRotation() {
+		return panelRotation;
 	}
 
 	public void setInverterId(Integer inverterId) {
@@ -48,9 +53,13 @@ public class CustomModuleObject {
 		this.moduleColor = moduleColor;
 	}
 
+	public void setPanelRotation(Integer panelRotation) {
+		this.panelRotation = panelRotation;
+	}
+
 	@Override
 	public String toString() {
 		return "CustomModuleObject [inverterId=" + inverterId + ", x=" + x + ", y=" + y + ", generatedPower="
-				+ generatedPower + ", moduleColor=" + moduleColor + "]";
+				+ generatedPower + ", moduleColor=" + moduleColor + ", panelRotation=" + panelRotation + "]";
 	}
 }

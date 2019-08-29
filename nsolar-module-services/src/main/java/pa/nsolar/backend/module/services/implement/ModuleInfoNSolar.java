@@ -119,6 +119,7 @@ public class ModuleInfoNSolar implements IModuleInfoNSolar {
 				customModuleObject.setY(module.getY());
 				customModuleObject.setGeneratedPower(this.getModuleProduction(modulesProduction, module.getInverter().getInverter_id()));
 				customModuleObject.setModuleColor(this.getModuleColor(customModuleObject.getGeneratedPower(), maxProduction));
+				customModuleObject.setPanelRotation(module.getRotation());
 				modules.add(customModuleObject);
 			}
 			customArrayObject.setModules(modules);
