@@ -2,13 +2,12 @@ package pa.nsolar.backend.module.services.dto;
 
 public enum EnumModuleColor {
 
-	C1(100, 86, "rgb(58,168,243)"),
-	C2(85, 71, "rgb(127,160,198)"),
-	C3(70, 56, "rgb(22,139,228)"),
-	C4(55, 31, "rgb(19,101,162)"),
-	C5(30, 16, "rgb(20,84,128)"),
-	C6(15, 1, "rgb(17,45,62)"),
-	C7(0, 0, "rgb(0,0,0)");
+	C1(100, 92, "rgb(76, 169, 238)"),
+	C2(91, 79, "rgb(51, 155, 238)"),
+	C3(78, 58, "rgb(7, 136, 228)"),
+	C4(57, 30, "rgb(2, 127, 215)"),
+	C5(29, 1, "rgb(6, 80, 138)"),
+	C6(0, 0, "rgb(0,0,0)");
 	
 	private final Integer maxPercentage;
 	private final Integer minPercentage;
