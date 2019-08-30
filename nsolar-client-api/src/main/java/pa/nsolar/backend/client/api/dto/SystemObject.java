@@ -1,7 +1,5 @@
 package pa.nsolar.backend.client.api.dto;
 
-import java.util.List;
-
 public class SystemObject {
 
 	private Integer system_id;

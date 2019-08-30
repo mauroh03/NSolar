@@ -3,7 +3,6 @@ package pa.nsolar.backend.client.services.interfaces;
 import pa.nsolar.backend.client.api.dto.ClientSummaryRequest;
 import pa.nsolar.backend.client.api.dto.ClientSummaryResponse;
 import pa.nsolar.backend.client.api.dto.EnergyLifeTimeDatedObject;
-import pa.nsolar.backend.client.api.dto.EnergyLifeTimeDatedRequest;
 import pa.nsolar.backend.client.api.dto.EnergyLifeTimeDatedResponse;
 import pa.nsolar.backend.client.api.dto.EnergyLifeTimeResponse;
 
