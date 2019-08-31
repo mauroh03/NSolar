@@ -143,8 +143,16 @@ public class ModuleInfoNSolar implements IModuleInfoNSolar {
 			return EnumModuleColor.C4.getColor();
 		} else if (modulePercentage >= EnumModuleColor.C5.getMinPercentage() && modulePercentage <= EnumModuleColor.C5.getMaxPercentage()) {
 			return EnumModuleColor.C5.getColor();
-		} else {
+		} else if (modulePercentage >= EnumModuleColor.C6.getMinPercentage() && modulePercentage <= EnumModuleColor.C6.getMaxPercentage()) {
 			return EnumModuleColor.C6.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C7.getMinPercentage() && modulePercentage <= EnumModuleColor.C7.getMaxPercentage()) {
+			return EnumModuleColor.C7.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C8.getMinPercentage() && modulePercentage <= EnumModuleColor.C8.getMaxPercentage()) {
+			return EnumModuleColor.C8.getColor();
+		} else if (modulePercentage >= EnumModuleColor.C9.getMinPercentage() && modulePercentage <= EnumModuleColor.C9.getMaxPercentage()) {
+			return EnumModuleColor.C9.getColor();
+		} else {
+			return EnumModuleColor.C10.getColor();
 		}
 	}
 
